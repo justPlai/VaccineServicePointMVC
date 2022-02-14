@@ -34,8 +34,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
   <a class="btn" href="?controller=booker&action=index">Booker</a>
   <a class="btn" href="?controller=booking&action=index">Booking</a>
   <a class="btn" href="?controller=ATK&action=index">ATK</a> -->
-  <br><?php echo "controller = " . $controller . ", action = " . $action; 
-      ?>
+  <br><?php echo "controller = " . $controller . ", action = " . $action; ?>
   <?php require_once("routes.php") ?>
 </body>
 
