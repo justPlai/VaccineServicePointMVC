@@ -1,9 +1,12 @@
 <?php
-    $controllers = array('pages'=>['home', 'error']);
+    $controllers = array('pages'=>['home', 'error'],
+                            'center'=>['search']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
             case "pages": $controller = new PagesController();
+                        break;
+            case "center": $controller = new CentersController();
                         break;
         }
         $controller->{$action}();
