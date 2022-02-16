@@ -19,5 +19,6 @@
         public function editVaccinePage(){
             require_once('views/admin/editVaccinePage.php');
         }
+
     }
 ?>
