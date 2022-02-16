@@ -1,12 +1,15 @@
 <?php
     $controllers = array('pages'=>['home', 'error'],
-                            'center'=>['search']);
+                        'center'=>['search'],
+                        'admin'=>['signInPage', 'editCenterIndex', 'editCenterPage', 'addCenterPage']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
             case "pages": $controller = new PagesController();
                         break;
             case "center": $controller = new CentersController();
+                        break;
+            case "admin": $controller = new AdminsController();
                         break;
         }
         $controller->{$action}();

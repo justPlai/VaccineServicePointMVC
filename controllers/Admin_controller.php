@@ -1,10 +1,23 @@
 <?php
     class AdminsController{
-        public function home(){
-            require_once('views/page/home.php');
+        public function signInPage(){
+            require_once('views/admin/signIn.php');
         }
-        public function error(){
-            require_once('views/page/error.php');
+        
+        public function editCenterIndex(){
+            require_once('views/admin/editCenterIndex.php');
+        }
+
+        public function editCenterPage(){
+            require_once('views/admin/editCenterPage.php');
+        }
+
+        public function addCenterPage(){
+            require_once('views/admin/addCenterPage.php');
+        }
+
+        public function editVaccinePage(){
+            require_once('views/admin/editVaccinePage.php');
         }
     }
 ?>
