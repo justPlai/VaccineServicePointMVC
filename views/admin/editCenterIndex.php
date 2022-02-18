@@ -45,7 +45,7 @@
                         <td>9.00 น.</td>
                         <td>16.00 น.</td>
                         <td><a href="?controller=admin&action=editCenterPage">แก้ไข</a></td>
-                        <td><a href="?controller=admin&action=editVaccinePage">แก้ไขวัคซีน</a></td>
+                        <td><a href="?controller=admin&action=editVaccinedetailPage">แก้ไขวัคซีน</a></td>
                         <td><a href="">ลบ</a> </td>
                         <td> <a href="#"></a> </td>
                         <td><a href="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369"></a></td>
