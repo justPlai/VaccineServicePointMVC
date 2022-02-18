@@ -24,8 +24,8 @@
             require_once('views/admin/VaccineIndex.php');
         }
 
-        public function editVaccinedetailPage(){
-            require_once('views/admin/editVaccinedetailPage.php');
+        public function VaccinedetailPage(){
+            require_once('views/admin/VaccinedetailPage.php');
         }
 
 
