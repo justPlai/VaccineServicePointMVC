@@ -3,7 +3,7 @@
     $severname = "localhost";
     $username = "root";
     $password ="";
-    $dbname = "vaccineservicepoint";
+    $dbname = "vaccine";
     $conn = mysqli_connect($severname, $username, $password);
     mysqli_set_charset($conn, "utf8");
     if($conn->connect_error){
