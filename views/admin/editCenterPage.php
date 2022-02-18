@@ -1,3 +1,5 @@
+<form method="get" action="">
+
 <main>
     <svg viewBox="0 0 1440 185" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary" width="100%" height="160">
         <path d="M 0 0 H 1440 V 60 C 1114 355 700 35 516 35 C 333 35 246 199 0 60 V 0 Z" />
@@ -41,7 +43,8 @@
             <br>
             <br>
         </form>
-        <button style="margin-left: 62px;" name="action" value="editCenterIndex">Cancle</button>
+        <input type="hidden" name="controller" value="admin" />
+        <button type="submit" style="margin-left: 62px;" name="action" value="editCenterIndex">Cancle</button>
         <button class="" style="margin-left: 24px;">Edit center</button>
     </div>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
