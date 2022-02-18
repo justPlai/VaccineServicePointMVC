@@ -37,7 +37,7 @@
                                 <td>
                                     <img src="https://cdn-icons-png.flaticon.com/512/6276/6276686.png" width="41" style="margin-left: 20px;">
                                 </td>
-                                <td><a href="">แก้ไข</a></td>
+                                <td><a href="?controller=admin&action=editVaccinedetailPage">แก้ไข</a></td>
                                 <td><a href="">ลบ</a></td>
                             </tr>
                             <tr>

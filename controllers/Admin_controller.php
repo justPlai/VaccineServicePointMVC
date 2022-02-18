@@ -28,6 +28,10 @@
             require_once('views/admin/VaccinedetailPage.php');
         }
 
+        public function editVaccinedetailPage(){
+            require_once('views/admin/editVaccinedetailPage.php');
+        }
+
 
 
     }
