@@ -16,8 +16,13 @@
       <div class="align-items-center row">
         <div class="col-lg-6 pb-5 pt-3">
           <h1 class="display-4 fw-bold mb-3">FIND CENTERS</h1>
-          <input placeholder="Name, specialty or keywords" type="text" name="From_search" class="fs-3 fw-light h-auto text-start w-75" />
-          <button class="btn btn-light float-none rounded-pill" type="button" style="margin-top: -15px; color: #000000; text-align: center; font-size: 24px; font-weight: normal;">Search</button>
+          <form>
+            <input placeholder="Name, specialty or keywords" type="text" name="key" class="fs-3 fw-light h-auto text-start w-75" />
+            <input type="hidden" name="controller" value="center">
+            <input type="hidden" name="action" value="search">
+            <button class="btn btn-light float-none rounded-pill" type="submit" style="margin-top: -15px; color: #000000; text-align: center; font-size: 24px; font-weight: normal;">Search</button>
+          </form>
+
         </div>
         <div class="col-lg-6 pb-3 pt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="1231.529" height="920.751" viewBox="0 0 1231.529 920.751" class="img-fluid">
