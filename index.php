@@ -43,17 +43,19 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
               <a class="nav-link px-lg-3 py-lg-4" href="#" style="color: #ffffff;">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link px-lg-3 py-lg-4" href="?controller=admin&action=editCenterIndex" style="color: #ffffff;  margin-right: 5px; width: 119px;">Edit centers</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link px-lg-3 py-lg-4" href="?controller=admin&action=VaccineIndex" style="color: #ffffff;  width: 119px; margin-left: -17px;">Edit Vaccine</a>
             </li>
             <li class="nav-item">
             </li>
             <li class="nav-item">
             </li>
           </ul>
-          <a class="nav-link px-lg-3 py-lg-4" href="?controller=admin&action=editCenterIndex" style="color: #ffffff; margin-left: -; margin-right: 5px; width: 119px;">Edit centers</a>
-          <a class="nav-link px-lg-3 py-lg-4" href="?controller=admin&action=VaccineIndex" style="color: #ffffff; margin-right: -108px; width: 119px; margin-left: -17px;">Edit Vaccine</a>
-          <b class=" text-white" style="margin-left: 423px;">Nuttawat Juntawong</b>
+          
+          
+          <b class=" text-white" style="margin-left: 300px;">Nuttawat Juntawong</b>
           <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=signInPage">Admin</a>
         </div>
         <!-- <div class="collapse navbar-collapse " id="navbarNavDropdown-4">
