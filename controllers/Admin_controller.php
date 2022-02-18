@@ -20,9 +20,15 @@
             require_once('views/admin/editVaccinePage.php');
         }
 
+        public function VaccineIndex(){
+            require_once('views/admin/VaccineIndex.php');
+        }
+
         public function editVaccinedetailPage(){
             require_once('views/admin/editVaccinedetailPage.php');
         }
+
+
 
     }
 ?>
