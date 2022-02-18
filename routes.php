@@ -1,7 +1,9 @@
 <?php
     $controllers = array('pages'=>['home', 'error'],
                         'center'=>['search', 'vaccineDetail'],
-                        'admin'=>['signInPage', 'editCenterIndex', 'editCenterPage', 'addCenterPage', 'editVaccinePage', 'VaccinedetailPage', 'VaccineIndex', 'editVaccinedetailPage']);
+                        'admin'=>['signInPage', 'editCenterIndex', 'editCenterPage'
+                        , 'addCenterPage', 'addVaccinePage', 'editVaccinePage', 'VaccinedetailPage'
+                        , 'addVaccineDetailPage', 'editVaccinedetailPage', 'VaccineIndex']); 
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){

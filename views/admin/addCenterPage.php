@@ -42,7 +42,7 @@
                     <br>
                     <br>
                 </form>
-                <button>Cancle</button>
+                <a href="?controller=admin&action=editCenterIndex">Cancle</a>
                 <button style="margin-left: 14px;">Add center</button>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

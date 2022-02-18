@@ -5,19 +5,19 @@
     <div class="container " style="margin-left: 293px;">
         <td> </td>
         <br>
-        <h1>Edit vaccine</h1>
+        <h1>Add vaccine</h1>
         <form>
             <label for="lname">Vaccine name</label>
-            <input type="text" id="lname" name="lname" value="Pfizer">
+            <input type="text" id="lname" name="lname" value="">
             <br>
             <br>
             <label for="lname">Image link</label>
-            <input type="text" id="fname" name="fname" value="http://www.efinancethai.com/news/picture/2020/12/4/T/5596774.jpg">
+            <input type="text" id="fname" name="fname" value="">
             <br>
             <br>
         </form>
         <a href="?controller=admin&action=VaccineIndex">Cancle</a>
-        <button style="margin-left: 14px;">Edit Vaccine</button>
+        <button style="margin-left: 14px;">Add Vaccine</button>
         <br>
         <br>
         <br>
@@ -34,19 +34,17 @@
         <div class="container">
         </div>
     </section>
-    <section class="bg-dark pb-5 pt-5 text-white-50">
-        <div class="container">
-        </div>
-    </section>
-    <section class="bg-dark pb-5 pt-5 text-white-50">
-        <div class="container">
-        </div>
-    </section>
-    <section class="bg-primary text-center text-lg-start text-white">
-    </section>
 </main>
 <script src="assets/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+<section class="bg-dark pb-5 pt-5 text-white-50">
+    <div class="container">
+    </div>
+</section>
+<section class="bg-dark pb-5 pt-5 text-white-50">
+    <div class="container">
+    </div>
+</section>
 
 </html>

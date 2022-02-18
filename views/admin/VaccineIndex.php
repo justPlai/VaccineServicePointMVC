@@ -11,8 +11,7 @@
                     width="35" class="float-start" />
                 <h3 class="float-start" style="padding-left: 9px;">Edit Vaccine</h3>
                 <div class="form-check mb-3">
-                    <input type="radio" class="btn-check" name="options" id="radioButton29" autocomplete="off">
-                    <label class="btn btn-success" for="radioButton29" style="margin-left: 717px;">Add Vaccine</label>
+                    <a class="btn btn-success" href="?controller=admin&action=addVaccinePage" style="margin-left: 717px;">Add Vaccine</a>
                 </div>
                 <div class="container " style="margin-left: -534px;">
                 </div>
@@ -35,7 +34,7 @@
                                 <img src="http://www.efinancethai.com/news/picture/2020/12/4/T/5596774.jpg" width="80">
                             </td>
                             <td>Pfizer</td>
-                            <td><a href="">แก้ไข</a></td>
+                            <td><a href="?controller=admin&action=editVaccinePage">แก้ไข</a></td>
                             <td><a href="">ลบ</a> </td>
                             <td> <a href="#"></a> </td>
                             <td><a
@@ -49,7 +48,7 @@
                                     width="80">
                             </td>
                             <td>Moderna</td>
-                            <td><a href="">แก้ไข</a></td>
+                            <td><a href="?controller=admin&action=editVaccinePage">แก้ไข</a></td>
                             <td><a href="">ลบ</a> </td>
                             <td> <a href="#"></a> </td>
                             <td><a
@@ -63,7 +62,7 @@
                                     width="80">
                             </td>
                             <td>Astrazeneca </td>
-                            <td><a href="">แก้ไข</a></td>
+                            <td><a href="?controller=admin&action=editVaccinePage">แก้ไข</a></td>
                             <td><a href="">ลบ</a> </td>
                             <td> <a href="#"></a> </td>
                             <td><a
