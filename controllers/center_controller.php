@@ -1,6 +1,8 @@
 <?php
     class CentersController{
         public function search(){
+            $key = $_GET['key'];
+            $center = center::search($key);
             require_once('views/center/search.php');
         }
 
