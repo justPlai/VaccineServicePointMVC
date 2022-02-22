@@ -42,7 +42,7 @@
                     <input type="text"  name="Locationlink" >
                     <br>
                     <br>
-                    <input type="text"  name="filler" value="1"> 
+                    <input type="hidden"  name="filler" value="1"> 
                 </form>
                 <input type="hidden" name="controller" value="admin" />
                 
