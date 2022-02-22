@@ -10,41 +10,44 @@
                 <br>
                 <h1>Add center</h1>
                 <form>
-                    <label for="lname">Center name</label>
-                    <input type="text"  name="CenterName" value="">
+                    <label >Center name</label>
+                    <input type="text"  name="CenterName" >
                     <br>
                     <br>
-                    <label for="lname">Date Start</label>
-                    <input type="date"  name="DateStart" value="">
+                    <label >Date Start</label>
+                    <input type="date"  name="DateStart" >
                     <br>
                     <br>
-                    <label for="lname">Date Stop</label>
-                    <input type="date"  name="DateStop" value="">
+                    <label >Date Stop</label>
+                    <input type="date"  name="DateStop" >
                     <br>
                     <br>
-                    <label for="lname">Time start</label>
-                    <input type="time"  name="TimeStart" value="">
+                    <label >Time start</label>
+                    <input type="time"  name="TimeStart" >
                     <br>
                     <br>
-                    <label for="lname">Time stop</label>
-                    <input type="time"  name="TimeStop" value="">
+                    <label >Time stop</label>
+                    <input type="time"  name="TimeStop" >
                     <br>
                     <br>
-                    <label for="lname">Website link</label>
-                    <input type="text"  name="Websitelink" value="">
+                    <label >Website link</label>
+                    <input type="text"  name="Websitelink" >
                     <br>
                     <br>
-                    <label for="lname">Image link</label>
-                    <input type="text"  name="Imagelink" value="">
+                    <label >Image link</label>
+                    <input type="text"  name="Imagelink" >
                     <br>
                     <br>
-                    <label for="lname">Location google link</label>
-                    <input type="text"  name="Locationlink" value="">
+                    <label >Location google link</label>
+                    <input type="text"  name="Locationlink" >
                     <br>
                     <br>
+                    <input type="text"  name="filler" value="1"> 
                 </form>
                 <input type="hidden" name="controller" value="admin" />
+                
                 <button type="submit" name="action" value="editCenterIndex">Cancle</button>
+                <input type="hidden" name="controller" value="center" />
                 <button style="margin-left: 14px;" type="submit" name="action" value="addCenter">Add center</button>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

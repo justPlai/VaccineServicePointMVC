@@ -3,15 +3,19 @@
                         'center'=>['search', 'vaccineDetail'],
                         'admin'=>['signInPage', 'editCenterIndex', 'editCenterPage'
                         , 'addCenterPage', 'addVaccinePage', 'editVaccinePage', 'VaccinedetailPage'
-                        , 'addVaccineDetailPage', 'editVaccinedetailPage', 'VaccineIndex']); 
+                        , 'addVaccineDetailPage', 'editVaccinedetailPage', 'VaccineIndex'],
+                        'center'=>['search', 'vaccineDetail', 'editCenterIndex', 'addCenter']); 
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
-            case "pages": $controller = new PagesController();
+            case "pages":   $controller = new PagesController();
                         break;
-            case "center": $controller = new CentersController();
+
+            case "center":  require_once("models/centerModel.php");
+                            $controller = new CentersController();
                         break;
-            case "admin": $controller = new AdminsController();
+
+            case "admin":   $controller = new AdminsController();
                         break;
         }
         $controller->{$action}();
@@ -27,4 +31,3 @@
     else{
         call('pages', 'error');
     }
-?>
