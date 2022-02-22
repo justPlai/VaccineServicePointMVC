@@ -11,41 +11,41 @@
                 <h1>Add center</h1>
                 <form>
                     <label for="lname">Center name</label>
-                    <input type="text" id="lname" name="lname" value="">
+                    <input type="text"  name="CenterName" value="">
                     <br>
                     <br>
                     <label for="lname">Date Start</label>
-                    <input type="date" id="lname" name="lname" value="">
+                    <input type="date"  name="DateStart" value="">
                     <br>
                     <br>
                     <label for="lname">Date Stop</label>
-                    <input type="date" id="lname" name="lname" value="">
+                    <input type="date"  name="DateStop" value="">
                     <br>
                     <br>
                     <label for="lname">Time start</label>
-                    <input type="time" id="lname" name="lname" value="">
+                    <input type="time"  name="TimeStart" value="">
                     <br>
                     <br>
                     <label for="lname">Time stop</label>
-                    <input type="time" id="lname" name="lname" value="">
+                    <input type="time"  name="TimeStop" value="">
                     <br>
                     <br>
                     <label for="lname">Website link</label>
-                    <input type="text" id="fname" name="fname" value="">
+                    <input type="text"  name="Websitelink" value="">
                     <br>
                     <br>
                     <label for="lname">Image link</label>
-                    <input type="text" id="fname" name="fname" value="">
+                    <input type="text"  name="Imagelink" value="">
                     <br>
                     <br>
                     <label for="lname">Location google link</label>
-                    <input type="text" id="fname" name="fname" value="">
+                    <input type="text"  name="Locationlink" value="">
                     <br>
                     <br>
                 </form>
                 <input type="hidden" name="controller" value="admin" />
                 <button type="submit" name="action" value="editCenterIndex">Cancle</button>
-                <button style="margin-left: 14px;">Add center</button>
+                <button style="margin-left: 14px;" type="submit" name="action" value="addCenter">Add center</button>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
                 <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z"/>
