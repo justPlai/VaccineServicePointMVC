@@ -12,6 +12,7 @@
             case "center": $controller = new CentersController();
                         break;
             case "admin": $controller = new AdminsController();
+                            require_once('models/vaccines/vaccine.php');
                         break;
         }
         $controller->{$action}();

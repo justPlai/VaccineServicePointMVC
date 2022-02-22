@@ -16,11 +16,14 @@
             require_once('views/admin/addCenterPage.php');
         }
 
-        public function editVaccinePage(){
+        public function editVaccinePage(){//plai
+            $id = $_GET['id'];
+            $vaccine = Vaccine::get($id);
             require_once('views/admin/editVaccinePage.php');
         }
 
-        public function VaccineIndex(){
+        public function VaccineIndex(){//plai
+            $vaccineList = Vaccine::getAll();
             require_once('views/admin/VaccineIndex.php');
         }
 

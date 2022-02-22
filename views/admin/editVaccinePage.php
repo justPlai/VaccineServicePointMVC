@@ -8,11 +8,11 @@
         <h1>Edit vaccine</h1>
         <form>
             <label for="lname">Vaccine name</label>
-            <input type="text" id="lname" name="lname" value="Pfizer">
+            <input type="text" id="lname" name="lname" value=<?php echo "$vaccine->vaccineName" ?>>
             <br>
             <br>
             <label for="lname">Image link</label>
-            <input type="text" id="fname" name="fname" value="http://www.efinancethai.com/news/picture/2020/12/4/T/5596774.jpg">
+            <input type="text" id="fname" name="fname" value=<?php echo "$vaccine->imgIcon" ?>>
             <br>
             <br>
         </form>
@@ -27,6 +27,8 @@
         <br>
         <br>
     </div>
+
+
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
         <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z" />
     </svg>
