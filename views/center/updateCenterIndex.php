@@ -31,6 +31,7 @@
                         <th scope="col">Date Stop</th>
                         <th scope="col">Time Start</th>
                         <th scope="col">Time Stop</th>
+                        <th scope="col">location</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Edit vaccine</th>
                         <th scope="col">Delete</th>
@@ -46,6 +47,7 @@
                             <td>$center->date_end</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
+                            <td><img src=$center->locationlink width=80/></td>
                             <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
                             <td><a href=>editVaccineDetail</a> </td>
                             <td><a href=>delete</a></td>";

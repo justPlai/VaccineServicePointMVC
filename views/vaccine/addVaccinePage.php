@@ -17,7 +17,7 @@
             <br>
         
         <input type="hidden" name="controller" value="vaccine">
-        <button type="submit" name="action" value="VaccineIndex" style="margin-left: 14px;">Cancel</button>
+        <button type="submit" name="action" value="index" style="margin-left: 14px;">Cancel</button>
         <button type="submit" name="action" value="addVaccine" style="margin-left: 14px;">Add Vaccine</button>
         </form>
         <br>
