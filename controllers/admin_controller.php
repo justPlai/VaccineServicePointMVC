@@ -3,6 +3,10 @@
         public function signInPage(){
             require_once('views/admin/signIn.php');
         }
+
+        public function signIn(){
+            
+        }
         
         public function editCenterIndex(){
             require_once('views/admin/editCenterIndex.php');

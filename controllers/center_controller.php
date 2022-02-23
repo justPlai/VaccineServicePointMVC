@@ -17,7 +17,6 @@
         
         public function addCenter()
         {
-
             //echo " in addCenter";
             $CenterName = $_GET['CenterName'];
             $DateStart = $_GET['DateStart'];
