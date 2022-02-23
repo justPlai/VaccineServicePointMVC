@@ -82,7 +82,7 @@ class Center
     {
         $centerList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM station where id like '%$key' or stationName like '%$key' ";
+        $sql = "SELECT * FROM station where id like '%$key%' or stationName like '%$key%' ";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row['id'];
