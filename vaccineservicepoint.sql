@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2022 at 04:40 PM
+-- Generation Time: Feb 23, 2022 at 08:41 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -59,14 +59,14 @@ CREATE TABLE `station` (
   `websiteOfficial` varchar(100) CHARACTER SET tis620 DEFAULT NULL,
   `imgIcon` varchar(500) DEFAULT NULL,
   `filler` int(5) NOT NULL,
-  `Locationlink` varchar(1000) NOT NULL
+  `locationlink` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `station`
 --
 
-INSERT INTO `station` (`id`, `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `Locationlink`) VALUES
+INSERT INTO `station` (`id`, `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES
 (1, 'บางใหญ่', '2022-02-18', '2022-02-20', '22:31:18', '26:31:18', NULL, NULL, 1, ''),
 (2, 'นครปฐม', '2022-02-09', '2022-02-24', '24:31:18', '33:31:18', NULL, NULL, 2, '');
 
