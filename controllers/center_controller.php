@@ -5,6 +5,11 @@
             $centerList = center::search($key);
             require_once('views/center/index.php');
         }
+        public function searchupdateCenter(){
+            $key = $_GET['key'];
+            $centerList = center::search($key);
+            require_once('views/center/updateCenterIndex.php');
+        }
 
         public function index(){
             $key = "";
