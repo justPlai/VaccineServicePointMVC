@@ -25,7 +25,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
+                        <th scope="col">#</th>
                         <th scope="col">Center Name</th>
                         <th scope="col">Date Start</th>
                         <th scope="col">Date Stop</th>
@@ -39,7 +39,7 @@
                         <?php 
                         foreach ($centerList as $center) {
                             echo "<tr>
-                                <td>$center->id Name</td>
+                                <td>$center->id</td>
                                 <td>$center->centerName</td>
                                 <td>$center->date_start</td>
                                 <td>$center->date_end</td>
