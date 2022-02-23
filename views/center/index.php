@@ -34,6 +34,7 @@
                             <td>$center->date_end</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
+                            
                             <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
                             <td><a href=>editVaccineDetail</a> </td>
                             <td><a href=>delete</a></td>";
@@ -43,6 +44,7 @@
                     echo "</table>";
                     ?>
                     
+                    </div>
                 </tbody>
             </table>
         </div>
