@@ -17,6 +17,11 @@
                     <input type="text" id="fname" name="fname">
                     <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png" width="30" style="margin-left: 757px; margin-top: -32px;"></a>
                 </form>
+                <form class="d-flex" method="get" action="">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
+                    <input type="hidden" name="controller" value="center">
+                    <button class="btn btn-outline-light" type="submit" value="search" name="action">Search</button>
+      </form>
             </div>
             <div class="row">
             </div>
