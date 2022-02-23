@@ -12,7 +12,7 @@
             <div class="form-check mb-3">
                 <a class="btn btn-success" style="margin-left: 864px;" href="?controller=center&action=addCenterPage">Add Center</a>
             </div>
-            <div class="container " style="margin-left: 135px;">
+            <div class="container " style="margin-left: 20px;">
                 <form method="get" action="">
                     <label for="fname" style="font-weight: bold;">Search</label>
                     <!-- <input type="hidden" name="controller" value="center"> -->
