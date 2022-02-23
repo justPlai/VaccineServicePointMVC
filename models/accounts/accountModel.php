@@ -17,26 +17,26 @@
         }
 
         public static function signIn($baseUsername, $basePassword){
-            $accountList = [];
             require("connection_connect.php");
-            $sql = "SELECT * FROM account WHERE username = $username ORDER BY id";
+            $sql = "SELECT * FROM account WHERE username = $baseUsername ORDER BY id";
             $result = $conn->query($sql);
-            while($my_row = $result->fetch_assoc()){
-                $id = $my_row["id"];
-                $username = $my_row["username"];
-                $password = $my_row["password"];
-                $firstname = $my_row["firstName"];
-                $lastname = $my_row["lastName"];
-
-                $accountList[] = new Account($id, $username, $password, $firstname, $lastname);
-            }
+            $my_row = $result->fetch_assoc();
+            $id = $my_row["id"];
+            $username = $my_row["username"];
+            $password = $my_row["password"];
+            $firstname = $my_row["firstName"];
+            $lastname = $my_row["lastName"];
+            $account = new Account($id, $username, $password, $firstname, $lastname);
+            
             require("connection_close.php");
-            if($accountList[0]->password == $basePassword){
-                $accountList[0]->token = true;
-                return $accountList[0];
+            if($account != null){
+                if($account->username == $baseUsername && $account->password == $basePassword){
+                    $account->token = true;
+                    return $account;
+                }
             }
 
-            return $accountList[0];
+            return $account;
         }
 
         
