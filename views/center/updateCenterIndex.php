@@ -47,10 +47,9 @@
                             <td>$center->date_end</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
-                            <td><a href=?controller=vaccine&action=updateCenterIndex&id=$center->id>
-                            <img src=https://cdn-icons-png.flaticon.com/512/1/1755.png width=20/></a></td>
                             <td><a href=$center->locationlink>
-                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
+                            <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
+                            <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a href=>editVaccineDetail</a> </td>
                             <td><a href=>delete</a></td>";
                     ?>
