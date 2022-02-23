@@ -25,7 +25,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Id</th>
                         <th scope="col">Center Name</th>
                         <th scope="col">Date Start</th>
                         <th scope="col">Date Stop</th>
@@ -49,8 +49,8 @@
                                 <td>$center->imgIcon</td>
                                 <td>$center->filler</td>
                                 "?>
-                                <td><a href=?controller=center&action=editCenterPage&id=$center->id>แก้ไข</a></td>
-                                <td><a href=>ลบ</a> </td>";
+                                <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
+                                <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
             ?>
             <?php    
             }
