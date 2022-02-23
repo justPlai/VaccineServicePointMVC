@@ -50,9 +50,10 @@
                     <br>
                     <br>
                     <br>
-                </form>
-                <a href="?controller=admin&action=editCenterIndex" type="button" style="margin-left: 496px;">Cancle</a>
+                
+                <a href="?controller=admin&action=editCenterIndex" type="button" style="margin-left: 496px;">Cancel</a>
                 <button>Edit vaccine</button>
+                </form>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
                 <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z"/>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2022 at 08:41 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Feb 23, 2022 at 10:01 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,7 @@ CREATE TABLE `station` (
   `websiteOfficial` varchar(100) CHARACTER SET tis620 DEFAULT NULL,
   `imgIcon` varchar(500) DEFAULT NULL,
   `filler` int(5) NOT NULL,
-  `locationlink` varchar(1000) NOT NULL
+  `locationlink` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -67,8 +67,8 @@ CREATE TABLE `station` (
 --
 
 INSERT INTO `station` (`id`, `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES
-(1, 'บางใหญ่', '2022-02-18', '2022-02-20', '22:31:18', '26:31:18', NULL, NULL, 1, ''),
-(2, 'นครปฐม', '2022-02-09', '2022-02-24', '24:31:18', '33:31:18', NULL, NULL, 2, '');
+(1, 'บางใหญ่', '2022-02-18', '2022-02-20', '22:31:18', '26:31:18', NULL, NULL, 1, NULL),
+(2, 'นครปฐม', '2022-02-09', '2022-02-24', '24:31:18', '33:31:18', NULL, NULL, 2, NULL);
 
 -- --------------------------------------------------------
 

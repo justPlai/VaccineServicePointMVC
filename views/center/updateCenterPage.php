@@ -41,10 +41,10 @@
             <input type="text" id="fname" name="Locationlink" value="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369">
             <br>
             <br>
+        <input type="hidden" name="controller" value="center" />
+        <button type="submit" style="margin-left: 62px;" name="action" value="updateCenterIndex">Cancel</button>
+        <button class="" style="margin-left: 24px;">Update center</button>
         </form>
-        <input type="hidden" name="controller" value="admin" />
-        <button type="submit" style="margin-left: 62px;" name="action" value="editCenterIndex">Cancle</button>
-        <button class="" style="margin-left: 24px;">Edit center</button>
     </div>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
         <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z" />

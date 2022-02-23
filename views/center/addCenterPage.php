@@ -43,12 +43,12 @@
                     <br>
                     <br>
                     <input type="hidden"  name="filler" value="1"> 
-                </form>
-                <input type="hidden" name="controller" value="admin" />
                 
-                <button type="submit" name="action" value="editCenterIndex">Cancle</button>
+                <input type="hidden" name="controller" value="center" />
+                <button type="submit" name="action" value="updateCenterIndex">Cancel</button>
                 <input type="hidden" name="controller" value="center" />
                 <button style="margin-left: 14px;" type="submit" name="action" value="addCenter">Add center</button>
+                </form>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
                 <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z"/>

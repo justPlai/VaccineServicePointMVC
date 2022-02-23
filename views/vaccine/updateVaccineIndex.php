@@ -11,7 +11,7 @@
                     width="35" class="float-start" />
                 <h3 class="float-start" style="padding-left: 9px;">Edit Vaccine</h3>
                 <div class="form-check mb-3">
-                    <a class="btn btn-success" href="?controller=admin&action=addVaccinePage" style="margin-left: 717px;">Add Vaccine</a>
+                    <a class="btn btn-success" href="?controller=vaccine&action=addVaccinePage" style="margin-left: 717px;">Add Vaccine</a>
                 </div>
                 <div class="container " style="margin-left: -534px;">
                 </div>
@@ -35,7 +35,7 @@
                             "<tr>
                             <td><img src=$vaccine->imgIcon width=80/></td>
                             <td>$vaccine->vaccineName</td>
-                            <td><a href=?controller=admin&action=editVaccinePage&id=$vaccine->id>แก้ไข</a></td>
+                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$vaccine->id>แก้ไข</a></td>
                             <td><a href=>ลบ</a> </td>";
                         ?>
                         <?php

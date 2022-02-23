@@ -3,18 +3,28 @@
         public function search(){
             $key = $_GET['key'];
             $center = center::search($key);
-            require_once('views/center/search.php');
+            require_once('views/center/index.php');
         }
 
-        public function vaccineDetail(){
-            require_once('views/center/VaccineDetail.php');
+        public function index(){
+            $centerList = Center::getAll();
+            require_once('views/center/index.php');
         }
 
-        public function editCenterIndex(){
-            require_once('views/admin/editCenterIndex.php');
+        public function updateCenterIndex(){
+            require_once('views/center/updateCenterIndex.php');
         }
 
-        
+        public function updateFormCenter(){
+            $id = $_GET['id'];
+            $center = Center::get($id);
+            require_once('views/center/updateCenterPage.php');
+        }
+
+        public function addCenterPage(){
+            require_once('views/center/addCenterPage.php');
+        }
+
         public function addCenter()
         {
             //echo " in addCenter";
@@ -31,7 +41,7 @@
             //echo $CenterName." ".$DateStart." ".$DateStop." ".$TimeStart." ".$TimeStop." ".$Websitelink." ".$Imagelink." ".$Locationlink." ".$filler;
 
             Center::Add($CenterName,$DateStart,$DateStop,$TimeStart,$TimeStop,$Websitelink,$Imagelink,$Locationlink,$filler);
-            CentersController::editCenterIndex();
+            CentersController::index();
             
 
         }
