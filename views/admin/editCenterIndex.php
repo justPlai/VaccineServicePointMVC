@@ -39,7 +39,7 @@
                         <?php 
                         foreach ($centerList as $center) {
                             echo "<tr>
-                                <td>$center->id</td>
+                                <td><img src=$center->imgIcon width=80/>
                                 <td>$center->centerName</td>
                                 <td>$center->date_start</td>
                                 <td>$center->date_end</td>
