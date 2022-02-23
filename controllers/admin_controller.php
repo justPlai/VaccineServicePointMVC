@@ -31,9 +31,19 @@
             $id = $_GET['id'];
             $vaccineName = $_GET['vaccineName'];
             $imgIcon = $_GET['imgIcon'];
-            echo "$id ,$vaccineName, $imgIcon";
             Vaccine::update($id, $vaccineName, $imgIcon);
             AdminsController::VaccineIndex();
+        }
+
+        public function addVaccinePage(){
+            require_once('views/admin/addVaccinePage.php');
+        }
+        public function addVaccine(){
+            $vaccineName = $_GET['vaccineName'];
+            $imgIcon = $_GET['imgIcon'];
+            Vaccine::add($vaccineName, $imgIcon);
+            AdminsController::VaccineIndex();
+
         }
 
         public function VaccineDelete(){
@@ -47,10 +57,6 @@
 
         public function editVaccinedetailPage(){
             require_once('views/admin/editVaccinedetailPage.php');
-        }
-
-        public function addVaccinePage(){
-            require_once('views/admin/addVaccinePage.php');
         }
 
         

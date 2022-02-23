@@ -7,17 +7,19 @@
         <br>
         <h1>Add vaccine</h1>
         <form>
-            <label for="lname">Vaccine name</label>
-            <input type="text" id="lname" name="lname" value="">
+            <label for="vaccineName">Vaccine name</label>
+            <input type="text" id="vaccineName" name="vaccineName" value="">
             <br>
             <br>
-            <label for="lname">Image link</label>
-            <input type="text" id="fname" name="fname" value="">
+            <label for="imgIcon">Image link</label>
+            <input type="text" id="imgIcon" name="imgIcon" value="">
             <br>
             <br>
+        
+        <input type="hidden" name="controller" value="admin">
+        <button type="submit" name="action" value="VaccineIndex" style="margin-left: 14px;">Cancel</button>
+        <button type="submit" name="action" value="addVaccine" style="margin-left: 14px;">Add Vaccine</button>
         </form>
-        <a href="?controller=admin&action=VaccineIndex">Cancle</a>
-        <button style="margin-left: 14px;">Add Vaccine</button>
         <br>
         <br>
         <br>

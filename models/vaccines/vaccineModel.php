@@ -43,9 +43,17 @@ class Vaccine
 
     public static function update($id, $vaccineName, $imgIcon){
         require("connection_connect.php");
-            $sql = "UPDATE vaccine SET vaccineName = '$vaccineName', imgIcon = '$imgIcon' WHERE id = '$id'";
-            $result = $conn->query($sql);
-            require("connection_close.php");
-            return "update success $result row";
+        $sql = "UPDATE vaccine SET vaccineName = '$vaccineName', imgIcon = '$imgIcon' WHERE id = '$id'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "update success $result row";
+    }
+
+    public static function add($vaccineName, $imgIcon){
+        require("connection_connect.php");
+        $sql = "INSERT INTO `vaccine` (`vaccineName`, `imgIcon`) VALUES ('$vaccineName', '$imgIcon');";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "Add success $result row";
     }
 }
