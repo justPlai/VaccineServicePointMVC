@@ -16,7 +16,7 @@
                         break;
 
             case "admin":   $controller = new AdminsController();
-                            require_once('models/vaccines/vaccine.php');
+                            require_once('models/vaccines/vaccineModel.php');
                         break;
         }
         $controller->{$action}();
