@@ -32,7 +32,7 @@
             $vaccineName = $_GET['vaccineName'];
             $imgIcon = $_GET['imgIcon'];
             echo "$id ,$vaccineName, $imgIcon";
-            //Vaccine::update($id, $vaccineName, $imgIcon);
+            Vaccine::update($id, $vaccineName, $imgIcon);
             AdminsController::VaccineIndex();
         }
 

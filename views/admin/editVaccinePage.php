@@ -17,9 +17,9 @@
             <br>
             <br>
         
-        <a href="?controller=admin&action=VaccineIndex">Cancle</a>
-        <input type="hidden" name="action" value="updateVaccine">
-        <button type="submit" style="margin-left: 14px;">Edit Vaccine</button>
+        <input type="hidden" name="controller" value="admin">
+        <button type="submit" name="action" value="VaccineIndex" style="margin-left: 14px;">Cancel</button>
+        <button type="submit" name="action" value="updateVaccine" style="margin-left: 14px;">Edit Vaccine</button>
         </form>
         <br>
         <br>
