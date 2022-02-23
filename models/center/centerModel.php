@@ -48,7 +48,7 @@ class Center
     {
         echo "in Add filler = $filler";
         require("connection_connect.php");
-        $sql = "INSERT INTO `station` ( `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `Locationlink`) VALUES ( '$CenterName', '$DateStart', '$DateStop', '$TimeStart', '$TimeStop', '$Websitelink', '$Imagelink', '$filler', '$Locationlink');";
+        $sql = "INSERT INTO `station` ( `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES ( '$CenterName', '$DateStart', '$DateStop', '$TimeStart', '$TimeStop', '$Websitelink', '$Imagelink', '$filler', '$Locationlink');";
         $result = $conn->query($sql);
         require("connection_close.php");
         return;
