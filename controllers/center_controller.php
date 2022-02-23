@@ -7,6 +7,7 @@
         }
         public function searchupdateCenter(){
             $key = $_GET['key'];
+            echo $key;
             $centerList = center::search($key);
             require_once('views/center/updateCenterIndex.php');
         }
