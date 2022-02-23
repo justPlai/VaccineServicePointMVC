@@ -5,10 +5,13 @@
         }
         
         public function editCenterIndex(){
+            $centerList = Center::getAll();
             require_once('views/admin/editCenterIndex.php');
         }
 
         public function editCenterPage(){
+            $id = $_GET['id'];
+            $center = Center::get($id);
             require_once('views/admin/editCenterPage.php');
         }
 
