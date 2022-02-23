@@ -7,6 +7,7 @@
         }
 
         public function index(){
+            $key = "";
             $centerList = Center::getAll();
             require_once('views/center/index.php');
         }

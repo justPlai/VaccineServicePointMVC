@@ -5,7 +5,8 @@
     <section class="border-bottom pb-5 pt-5 text-center">
         <div class="container pb-5 pt-5">
             <img src="https://freeiconshop.com/wp-content/uploads/edd/search-flat.png" width="29" class="float-start" />
-            <h3 class="float-start" style="padding-left: 9px;">Search : โรงพยาบาล</h3>
+            <h3 class="float-start" style="padding-left: 9px;">Search : </h3>
+            <input type="text" name="key" value=<?php echo "$key" ?> style="margin-right: 950px";>
             <div class="row">
             </div>
             <table class="table">
