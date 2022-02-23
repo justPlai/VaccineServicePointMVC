@@ -37,20 +37,20 @@
                     </tr>
                     <tbody>
                         <?php 
-                        foreach ($centerList as $station) {
+                        foreach ($centerList as $center) {
                             echo "<tr>
-                                <td><img src=$station->imgIcon width=80/>
-                                <td>$station->centerName</td>
-                                <td>$station->date_start</td>
-                                <td>$station->date_end</td>
-                                <td>$station->time_start</td>
-                                <td>$station->time_end</td>
-                                <td>$station->websiteOfficial</td>
-                                <td>$station->imgIcon</td>
-                                <td>$station->filler</td>"?>
+                                <td><img src=$center->imgIcon width=80/>
+                                <td>$center->centerName</td>
+                                <td>$center->date_start</td>
+                                <td>$center->date_end</td>
+                                <td>$center->time_start</td>
+                                <td>$center->time_end</td>
+                                <td>$center->websiteOfficial</td>
+                                <td>$center->imgIcon</td>
+                                <td>$center->filler</td>"?>
                                 <?php
                             echo"<tr>
-                                <td><a href=?controller=admin&action=editCenterPage&id=$station->id>แก้ไข</a></td>
+                                <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
                                 <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
             ?>
             <?php    
