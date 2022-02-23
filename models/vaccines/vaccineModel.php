@@ -56,4 +56,12 @@ class Vaccine
         require("connection_close.php");
         return "Add success $result row";
     }
+
+    public static function delete($id){
+        require("connection_connect.php");
+        $sql = "DELETE FROM vaccine WHERE id = '$od'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "Delete success $result row";
+    }
 }
