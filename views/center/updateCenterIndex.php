@@ -35,82 +35,25 @@
                         <th scope="col">Edit vaccine</th>
                         <th scope="col">Delete</th>
                     </tr>
-                    <tbody>
-                        <?php 
-                        foreach ($centerList as $center) {
-                            echo "<tr>
-                                <td>$center->id</td>
-                                <td>$center->centerName</td>
-                                <td>$center->date_start</td>
-                                <td>$center->date_end</td>
-                                <td>$center->time_start</td>
-                                <td>$center->time_end</td>
-                                <td>$center->websiteOfficial</td>
-                                <td>$center->imgIcon</td>
-                                <td>$center->filler</td>
-                                <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
-                                <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
-            ?>
-            <?php    
-            }
-            echo "</table>";
-        ?>
-                        </div>
-                        
-                    </tbody>
-                </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <img src="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/223227621_127665032863005_1327233103446507393_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqUhfrtWfHi3smk89FxKNYhX9dR24r5EGFf11HbivkQYg5Cg7X8EZFZwzTpP3sqZCu6O_IN6DSRKy_-Deo31bX&_nc_ohc=u5pMGQUOkBsAX-qXF5Z&_nc_ht=scontent.fkdt2-1.fna&oh=00_AT9pCFm-fON3KeQFHBw9Y9IKyDGwdHhKsmbCmKxzUZ44aw&oe=620AC075" width="60" class=" ms-5">
-                        </td>
-                        <td>ศูนย์ฉีดวัคซีนกลางบางซื่อ</td>
-                        <td>1 ก.พ. 65</td>
-                        <td>3 ก.พ. 65</td>
-                        <td>9.00 น.</td>
-                        <td>16.00 น.</td>
-                        <td><a href="?controller=admin&action=editCenterPage">แก้ไข</a></td>
-                        <td><a href="?controller=admin&action=VaccinedetailPage">แก้ไขวัคซีน</a></td>
-                        <td><a href="">ลบ</a> </td>
-                        <td> <a href="#"></a> </td>
-                        <td><a href="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369"></a></td>
-                        <td><a href="https://www.facebook.com/CentralVaccinationCenter/"></a> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/223227621_127665032863005_1327233103446507393_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqUhfrtWfHi3smk89FxKNYhX9dR24r5EGFf11HbivkQYg5Cg7X8EZFZwzTpP3sqZCu6O_IN6DSRKy_-Deo31bX&_nc_ohc=u5pMGQUOkBsAX-qXF5Z&_nc_ht=scontent.fkdt2-1.fna&oh=00_AT9pCFm-fON3KeQFHBw9Y9IKyDGwdHhKsmbCmKxzUZ44aw&oe=620AC075" width="60" class=" ms-5">
-                        </td>
-                        <td>ศูนย์ฉีดวัคซีนกลางบางซื่อ</td>
-                        <td>1 ก.พ. 65</td>
-                        <td>3 ก.พ. 65</td>
-                        <td>9.00 น.</td>
-                        <td>16.00 น.</td>
-                        <td><a href="">แก้ไข</a></td>
-                        <td><a href="">แก้ไขวัคซีน</a></td>
-                        <td><a href="">ลบ</a> </td>
-                        <td> <a href="#"></a> </td>
-                        <td><a href="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369"></a></td>
-                        <td><a href="https://www.facebook.com/CentralVaccinationCenter/"></a> </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/223227621_127665032863005_1327233103446507393_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqUhfrtWfHi3smk89FxKNYhX9dR24r5EGFf11HbivkQYg5Cg7X8EZFZwzTpP3sqZCu6O_IN6DSRKy_-Deo31bX&_nc_ohc=u5pMGQUOkBsAX-qXF5Z&_nc_ht=scontent.fkdt2-1.fna&oh=00_AT9pCFm-fON3KeQFHBw9Y9IKyDGwdHhKsmbCmKxzUZ44aw&oe=620AC075" width="60" class=" ms-5">
-                        </td>
-                        <td>ศูนย์ฉีดวัคซีนกลางบางซื่อ</td>
-                        <td>1 ก.พ. 65</td>
-                        <td>3 ก.พ. 65</td>
-                        <td>9.00 น.</td>
-                        <td>16.00 น.</td>
-                        <td><a href="">แก้ไข</a></td>
-                        <td><a href="">แก้ไขวัคซีน</a></td>
-                        <td><a href="">ลบ</a> </td>
-                        <td> <a href="#"></a> </td>
-                        <td><a href="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369"></a></td>
-                        <td><a href="https://www.facebook.com/CentralVaccinationCenter/"></a> </td>
-                    </tr>
-                </tbody>
-            </table>
+                    <?php
+                    foreach ($centerList as $center) {
+                        echo
+                        "<tr>
+                            <td><img src=$center->id width=80/></td>
+                            <td>$center->centerName</td>
+                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>แก้ไข</a></td>
+                            <td><a href=>ลบ</a> </td>";
+                    ?>
+                    <?php
+                    }
+                    echo "</table>";
+                    ?>
         </div>
+
+        </tbody>
+        </thead>
+        
         <nav aria-label="...">
             <ul class=" pagination" style="margin-left: 819px;">
                 <li class="page-item disabled">
@@ -146,4 +89,5 @@
         </div>
     </div>
 </section>
+
 </html>

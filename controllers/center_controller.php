@@ -12,6 +12,7 @@
         }
 
         public function updateCenterIndex(){
+            $centerList = Center::getAll();
             require_once('views/center/updateCenterIndex.php');
         }
 

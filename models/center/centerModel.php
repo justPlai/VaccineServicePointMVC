@@ -10,6 +10,7 @@ class Center
     public $websiteOfficial;
     public $imgIcon;
     public $filler;
+    
     public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $filler)
     {
         $this->id = $id;
@@ -44,7 +45,7 @@ class Center
         return $centerList;
     }
 
-    public static function Add($CenterName,$DateStart,$DateStop,$TimeStart,$TimeStop,$Websitelink,$Imagelink,$Locationlink,$filler)
+    public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler)
     {
         echo "in Add filler = $filler";
         require("connection_connect.php");
@@ -75,6 +76,5 @@ class Center
         }
         require("connection_close.php");
         return $centerList;
-
-}
+    }
 }
