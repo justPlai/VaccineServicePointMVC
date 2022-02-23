@@ -15,7 +15,7 @@
                 <form>
                     <label for="fname" style="font-weight: bold;">Search</label>
                     <input type="text" id="fname" name="fname">
-                    <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png" width="25" style=" margin-top: -32px;"></a>
+                    <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png" width="30" style=" margin-top: -32px;"></a>
                 </form>
             </div>
             <div class="row">
