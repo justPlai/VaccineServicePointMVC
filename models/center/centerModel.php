@@ -93,9 +93,8 @@ class Center
             $time_end = $my_row['time_end'];
             $websiteOfficial = $my_row['websiteOfficial'];
             $imgIcon = $my_row['imgIcon'];
-            $imgIcon = $my_row['imgIcon'];
             $filler = $my_row['filler'];
-            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
+            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $filler);
         }
         require("connection_close.php");
         return $centerList;
