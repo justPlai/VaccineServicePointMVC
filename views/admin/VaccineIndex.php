@@ -33,10 +33,7 @@
                         foreach ($vaccineList as $vaccine) {
                             echo
                             "<tr>
-                            <td><img src=$vaccine->imgIcon width=80/>"?>
-                            <?php
-                            echo
-                            "</td>
+                            <td><img src=$vaccine->imgIcon width=80/></td>
                             <td>$vaccine->vaccineName</td>
                             <td><a href=?controller=admin&action=editVaccinePage&id=$vaccine->id>แก้ไข</a></td>
                             <td><a href=>ลบ</a> </td>";
