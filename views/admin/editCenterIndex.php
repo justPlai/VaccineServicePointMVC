@@ -39,14 +39,14 @@
                         <?php 
                         foreach ($centerList as $center) {
                             echo "<tr>
-                                <td><img src=$center->CenterName</td>
-                                <td>$center->DateStart</td>
-                                <td>$center->DateStop</td>
-                                <td>$center->TimeStart</td>
-                                <td>$center->TimeStop</td>
-                                <td>$center->Websitelink</td>
-                                <td>$center->Imagelink</td>
-                                <td>$center->Locationlink</td>
+                                <td>$center->id</td>
+                                <td>$center->centerName</td>
+                                <td>$center->date_start</td>
+                                <td>$center->date_end</td>
+                                <td>$center->time_start</td>
+                                <td>$center->time_end</td>
+                                <td>$center->websiteOfficial</td>
+                                <td>$center->imgIcon</td>
                                 <td>$center->filler</td>
                                 <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
                                 <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
