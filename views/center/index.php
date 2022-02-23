@@ -3,10 +3,18 @@
         <path d="M 0 0 H 1440 V 60 C 1114 355 700 35 516 35 C 333 35 246 199 0 60 V 0 Z" />
     </svg>
     <section class="border-bottom pb-5 pt-5 text-center">
+    <img src="https://freeiconshop.com/wp-content/uploads/edd/search-flat.png" width="29" class="float-start" style="margin-left: 135px"/>
+        <div>
+        <h3 class="float-start" style="padding-left: 9px;">Search : </h3>
+            <form method="get" action="">
+                <input type="text" name="key" value=<?php echo "$key" ?>>
+                <input type="hidden" name="controller" value="center">
+                <button type="submit" name="action" value="search" style="margin-right: 840px">search</button>
+            </form>
+        </div>
         <div class="container pb-5 pt-5">
-            <img src="https://freeiconshop.com/wp-content/uploads/edd/search-flat.png" width="29" class="float-start" />
-            <h3 class="float-start" style="padding-left: 9px;">Search : </h3>
-            <input type="text" name="key" value=<?php echo "$key" ?> style="margin-right: 950px";>
+            
+            
             <div class="row">
             </div>
             <table class="table">
@@ -36,9 +44,12 @@
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
                             
-                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
-                            <td><a href=>editVaccineDetail</a> </td>
-                            <td><a href=>delete</a></td>";
+                            <td><a href=?controller=vaccineDetail&action=index&id=$center->id>
+                            <img src=https://cdn-icons-png.flaticon.com/512/1/1755.png width=20/></a></td>
+                            <td><a href=$center->locationlink>
+                            <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
+                            <td><a href=$center->websiteOfficial>
+                            <img src=https://cdn-icons-png.flaticon.com/512/4298/4298077.png width=20/></a></td>";
                     ?>
                      <?php
                     }
