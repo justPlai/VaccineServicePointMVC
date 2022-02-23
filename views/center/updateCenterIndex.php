@@ -47,7 +47,7 @@
                             <td>$center->date_end</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
-                            <td><a href=?controller=vaccine&action=index&id=$center->id>
+                            <td><a href=?controller=vaccine&action=updateCenterIndex&id=$center->id>
                             <img src=https://cdn-icons-png.flaticon.com/512/1/1755.png width=20/></a></td>
                             <td><a href=$center->locationlink>
                             <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
