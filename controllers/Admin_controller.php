@@ -16,14 +16,28 @@
             require_once('views/admin/addCenterPage.php');
         }
 
+        public function VaccineIndex(){//plai
+            $vaccineList = Vaccine::getAll();
+            require_once('views/admin/VaccineIndex.php');
+        }
+
         public function editVaccinePage(){//plai
             $id = $_GET['id'];
             $vaccine = Vaccine::get($id);
             require_once('views/admin/editVaccinePage.php');
         }
 
-        public function VaccineIndex(){//plai
-            $vaccineList = Vaccine::getAll();
+        public function updateVaccine(){
+            $id = $_GET['id'];
+            $vaccineName = $_GET['vaccineName'];
+            $imgIcon = $_GET['imgIcon'];
+            echo "$id ,$vaccineName, $imgIcon";
+            //Vaccine::update($id, $vaccineName, $imgIcon);
+            AdminsController::VaccineIndex();
+        }
+
+        public function VaccineDelete(){
+            //alert comfirm delete
             require_once('views/admin/VaccineIndex.php');
         }
 

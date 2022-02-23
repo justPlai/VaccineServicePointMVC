@@ -7,17 +7,20 @@
         <br>
         <h1>Edit vaccine</h1>
         <form>
+            <input type="hidden" name="id" value=<?php echo "$vaccine->id" ?>>
             <label for="lname">Vaccine name</label>
-            <input type="text" id="lname" name="lname" value=<?php echo "$vaccine->vaccineName" ?>>
+            <input type="text" id="vaccineName" name="vaccineName" value=<?php echo "$vaccine->vaccineName" ?>>
             <br>
             <br>
             <label for="lname">Image link</label>
-            <input type="text" id="fname" name="fname" value=<?php echo "$vaccine->imgIcon" ?>>
+            <input type="text" id="imgIcon" name="imgIcon" value=<?php echo "$vaccine->imgIcon" ?>>
             <br>
             <br>
-        </form>
+        
         <a href="?controller=admin&action=VaccineIndex">Cancle</a>
-        <button style="margin-left: 14px;">Edit Vaccine</button>
+        <input type="hidden" name="action" value="updateVaccine">
+        <button type="submit" style="margin-left: 14px;">Edit Vaccine</button>
+        </form>
         <br>
         <br>
         <br>

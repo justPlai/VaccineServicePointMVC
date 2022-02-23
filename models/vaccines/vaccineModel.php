@@ -40,4 +40,12 @@ class Vaccine
         require("connection_close.php");
         return new vaccine($id, $vaccineName, $imgIcon);
     }
+
+    public static function update($id, $vaccineName, $imgIcon){
+        require("connection_connect.php");
+            $sql = "UPDATE vaccine SET vaccineName = '$vaccineName', imgIcon = '$imgIcon' WHERE id = '$id'";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return "update success $result row";
+    }
 }
