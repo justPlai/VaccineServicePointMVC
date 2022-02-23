@@ -48,6 +48,26 @@ class Center
         return $centerList;
     }
 
+    public static function get($id){
+        require("connection_connect.php");
+        $sql = "SELECT * FROM station WHERE id = '$id'";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+        $id = $my_row['id'];
+        $centerName = $my_row['stationName'];
+        $date_start = $my_row['date_start'];
+        $date_end = $my_row['date_end'];
+        $time_start = $my_row['time_start'];
+        $time_end = $my_row['time_end'];
+        $websiteOfficial = $my_row['websiteOfficial'];
+        $imgIcon = $my_row['imgIcon'];
+        $locationlink = $my_row['locationlink'];
+        $filler = $my_row['filler'];
+
+        require("connection_close.php");
+        return new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
+    }
+
     public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $locationlink, $filler)
     {
         echo "in Add filler = $filler";
