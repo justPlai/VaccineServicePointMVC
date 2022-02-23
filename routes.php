@@ -2,7 +2,7 @@
     $controllers = array('pages'=>['home', 'error'],
                         'center'=>['search', 'vaccineDetail'],
                         'admin'=>['signInPage', 'editCenterIndex', 'editCenterPage'
-                        , 'addCenterPage', 'addVaccinePage', 'editVaccinePage', 'updateVaccine'
+                        , 'addCenterPage', 'addVaccinePage', 'editVaccinePage', 'updateVaccine', 'addVaccine'
                         , 'VaccinedetailPage', 'addVaccineDetailPage', 'editVaccinedetailPage', 'VaccineIndex'],
                         'center'=>['search', 'vaccineDetail', 'editCenterIndex', 'addCenter']); 
     function call($controller, $action){
