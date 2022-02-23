@@ -11,7 +11,7 @@
             case "pages":   $controller = new PagesController();
                         break;
 
-            case "center":  require_once("models/centerModel.php");
+            case "center":  require_once("models/center/centerModel.php");
                             $controller = new CentersController();
                         break;
 
