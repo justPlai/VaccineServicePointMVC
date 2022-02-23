@@ -9,7 +9,7 @@
             <form method="get" action="">
                 <input type="text" name="key" value=<?php echo "$key" ?>>
                 <input type="hidden" name="controller" value="center">
-                <button type="submit" name="action" value="search" style="margin-right: 840px">search</button>
+                <button type="submit" name="action" value="search" style="margin-right: 950px">search</button>
             </form>
         </div>
         <div class="container pb-5 pt-5">
