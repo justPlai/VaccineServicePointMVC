@@ -47,8 +47,9 @@
                                 <td>$center->time_end</td>
                                 <td>$center->websiteOfficial</td>
                                 <td>$center->imgIcon</td>
-                                <td>$center->filler</td>
-                                "?>
+                                <td>$center->filler</td>"?>
+                                <?php
+                            echo"<tr>
                                 <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
                                 <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
             ?>
