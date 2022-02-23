@@ -9,19 +9,21 @@ class Center
     public $time_end;
     public $websiteOfficial;
     public $imgIcon;
+    public $locationlink;
     public $filler;
     
-    public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $filler)
+    public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler)
     {
         $this->id = $id;
         $this->centerName = $centerName;
         $this->date_start = $date_start;
-        $this->date_start = $date_end;
-        $this->date_start = $time_start;
-        $this->date_start = $time_end;
-        $this->date_start = $websiteOfficial;
-        $this->date_start = $imgIcon;
-        $this->date_start = $filler;
+        $this->date_end = $date_end;
+        $this->time_start = $time_start;
+        $this->time_end = $time_end;
+        $this->websiteOfficial = $websiteOfficial;
+        $this->imgIcon = $imgIcon;
+        $this->locationlink = $locationlink;
+        $this->filler = $filler;
     }
     public static function getAll()
     {
@@ -38,18 +40,19 @@ class Center
             $time_end = $my_row['time_end'];
             $websiteOfficial = $my_row['websiteOfficial'];
             $imgIcon = $my_row['imgIcon'];
+            $locationlink = $my_row['locationlink'];
             $filler = $my_row['filler'];
-            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $filler);
+            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
         }
         require("connection_close.php");
         return $centerList;
     }
 
-    public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler)
+    public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $locationlink, $filler)
     {
         echo "in Add filler = $filler";
         require("connection_connect.php");
-        $sql = "INSERT INTO `station` ( `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES ( '$CenterName', '$DateStart', '$DateStop', '$TimeStart', '$TimeStop', '$Websitelink', '$Imagelink', '$filler', '$Locationlink');";
+        $sql = "INSERT INTO `station` ( `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES ( '$CenterName', '$DateStart', '$DateStop', '$TimeStart', '$TimeStop', '$Websitelink', '$Imagelink', '$filler', '$locationlink');";
         $result = $conn->query($sql);
         require("connection_close.php");
         return;
@@ -72,7 +75,7 @@ class Center
             $imgIcon = $my_row['imgIcon'];
             $imgIcon = $my_row['imgIcon'];
             $filler = $my_row['filler'];
-            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $filler);
+            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
         }
         require("connection_close.php");
         return $centerList;

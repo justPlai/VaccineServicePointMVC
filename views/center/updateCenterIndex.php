@@ -25,7 +25,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">Icon</th>
                         <th scope="col">Center Name</th>
                         <th scope="col">Date Start</th>
                         <th scope="col">Date Stop</th>
@@ -40,10 +40,15 @@
                     foreach ($centerList as $center) {
                         echo
                         "<tr>
-                            <td><img src=$center->id width=80/></td>
+                            <td><img src=$center->imgIcon width=80/></td>
                             <td>$center->centerName</td>
-                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>แก้ไข</a></td>
-                            <td><a href=>ลบ</a> </td>";
+                            <td>$center->date_start</td>
+                            <td>$center->date_end</td>
+                            <td>$center->time_start</td>
+                            <td>$center->time_end</td>
+                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$center->id>editCenter</a></td>
+                            <td><a href=>editVaccineDetail</a> </td>
+                            <td><a href=>delete</a></td>";
                     ?>
                     <?php
                     }
