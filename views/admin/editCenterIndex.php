@@ -35,6 +35,30 @@
                         <th scope="col">Edit vaccine</th>
                         <th scope="col">Delete</th>
                     </tr>
+                    <tbody>
+                        <?php 
+                        foreach ($centerList as $center) {
+                            echo "<tr>
+                                <td>$center->id Name</td>
+                                <td>$center->centerName</td>
+                                <td>$center->date_start</td>
+                                <td>$center->date_end</td>
+                                <td>$center->time_start</td>
+                                <td>$center->time_end</td>
+                                <td>$center->websiteOfficial</td>
+                                <td>$center->imgIcon</td>
+                                <td>$center->filler</td>
+                                "?>
+                                <td><a href=?controller=center&action=editCenterPage&id=$center->id>แก้ไข</a></td>
+                                <td><a href=>ลบ</a> </td>";
+            ?>
+            <?php    
+            }
+            echo "</table>";
+        ?>
+                        </div>
+                        
+                    </tbody>
                 </thead>
                 <tbody>
                     <tr>
