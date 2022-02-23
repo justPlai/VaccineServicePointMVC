@@ -39,14 +39,14 @@
                         <?php 
                         foreach ($centerList as $center) {
                             echo "<tr>
-                                <td><img src=$center->imgIcon width=80/>
-                                <td>$center->centerName</td>
-                                <td>$center->date_start</td>
-                                <td>$center->date_end</td>
-                                <td>$center->time_start</td>
-                                <td>$center->time_end</td>
-                                <td>$center->websiteOfficial</td>
-                                <td>$center->imgIcon</td>
+                                <td><img src=$center->CenterName</td>
+                                <td>$center->DateStart</td>
+                                <td>$center->DateStop</td>
+                                <td>$center->TimeStart</td>
+                                <td>$center->TimeStop</td>
+                                <td>$center->Websitelink</td>
+                                <td>$center->Imagelink</td>
+                                <td>$center->Locationlink</td>
                                 <td>$center->filler</td>"?>
                                 <?php
                             echo"<tr>
