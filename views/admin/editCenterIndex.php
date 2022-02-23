@@ -47,9 +47,7 @@
                                 <td>$center->Websitelink</td>
                                 <td>$center->Imagelink</td>
                                 <td>$center->Locationlink</td>
-                                <td>$center->filler</td>"?>
-                                <?php
-                            echo"<tr>
+                                <td>$center->filler</td>
                                 <td><a href=?controller=admin&action=editCenterPage&id=$center->id>แก้ไข</a></td>
                                 <td><a href=>แก้ไขวัคซีน</a> </td> <td><a href=>ลบ</a> </td>";
             ?>
