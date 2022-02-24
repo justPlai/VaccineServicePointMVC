@@ -8,6 +8,8 @@
         }
 
         public function updateFormVaccineDetail(){
+            $vaccineDetail_id = $_GET['id'];
+            $vaccineDetail = VaccineDetail::get($vaccineDetail_id);
             require_once('views/vaccineDetail/updateVaccinedetailPage.php');
         }
 
