@@ -23,8 +23,15 @@
         }
 
         public function addVaccineDetailPage(){
-
+            $vaccineList = Vaccine::getAll();
+            $id = $_GET['id'];
+            $center = Center::get($id);
             require_once('views/vaccineDetail/addVaccineDetail.php');
+        }
+
+        public function addVaccineDetail(){
+            $vaccineId = $_GET['vaccineId'];
+            VaccineDetailController::index();
         }
 
     }
