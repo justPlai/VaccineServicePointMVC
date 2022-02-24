@@ -20,11 +20,11 @@
             <svg viewBox="0 0 1440 185" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary" width="100%" height="160">
                 <path d="M 0 0 H 1440 V 60 C 1114 355 700 35 516 35 C 333 35 246 199 0 60 V 0 Z"/>
             </svg>
-            <div class="container " style="margin-left: 415px;">
+            <div class="container " style="margin-left: 0px;">
                 <td> </td>
                 <br>
-                <form style="margin-left: 0px;">
-                    <h4>แก้ไขรายละเอียดวัคซีน : ศูนย์ฉีดวัคซีนกลางบางซื่อ</h4>
+                <form style="margin-left: 270px;">
+                    <h4>แก้ไขรายละเอียดวัคซีน : <?php echo "$center->centerName" ?></h4>
                     <br>
                     <b>เลือกวัคซีน </b>
                     <select name="Vaccibe" id="vac">
@@ -51,8 +51,10 @@
                     <br>
                     <br>
                 
-                <a href="?controller=admin&action=editCenterIndex" type="button" style="margin-left: 496px;">Cancel</a>
-                <button>Edit vaccine</button>
+                    <?php echo "<a href=?controller=vaccineDetail&action=index&id=$center->id type=button style=margin-left: 496px;>Cancel</a>" ?>
+                    <input type="hidden" name="controller" value="vaccineDetail">
+                    <input type="hidden" name="id" value=<?php echo "$center->id" ?> >
+                    <button type="submit" name="action" value="index">Edit vaccine</button>
                 </form>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

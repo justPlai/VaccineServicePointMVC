@@ -10,7 +10,16 @@
         public function updateFormVaccineDetail(){
             $vaccineDetail_id = $_GET['id'];
             $vaccineDetail = VaccineDetail::get($vaccineDetail_id);
+            $vaccineList = Vaccine::getAll();
+            $center = Center::get($vaccineDetail->centerId);
+            $id = $center->id;
             require_once('views/vaccineDetail/updateVaccinedetailPage.php');
+        }
+
+        public function updateVaccineDetail(){
+            $id = $_GET['id'];
+
+            VaccineDetailController::index();
         }
 
     }

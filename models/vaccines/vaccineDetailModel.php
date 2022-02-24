@@ -47,7 +47,7 @@
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
             $id = $my_row["id"];
-            $centerId = $my_row["centerId"];
+            $centerId = $my_row["stationId"];
             $vaccineId = $my_row["vaccineId"];
             $vaccine = Vaccine::get($vaccineId);
             $vaccineName = $vaccine->vaccineName;
