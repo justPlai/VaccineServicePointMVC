@@ -6,8 +6,15 @@
     </svg>
     <section class="border-bottom pb-5 pt-5 text-center">
         <div class="container pb-5 pt-5">
-            <img src="https://cdn-icons-png.flaticon.com/512/1/1755.png" width="29" class="float-start" />
-            <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : </h3><h3 style="margin-right: 1000px;"><?php echo "$center->centerName" ?></h3>
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/512/1/1755.png" width="29" class="float-start" />
+                <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : <?php echo "$center->centerName" ?></h3>
+                <form>
+                    <input type="hidden" name="controller" value="vaccineDetail" >
+                    <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
+                    <button type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 800px;">add VaccineDetail</button>
+                </form>
+            </div>
             <div class="row">
             </div>
             <table class="table">

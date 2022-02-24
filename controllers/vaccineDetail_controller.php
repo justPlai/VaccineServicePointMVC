@@ -22,5 +22,10 @@
             VaccineDetailController::index();
         }
 
+        public function addVaccineDetailPage(){
+
+            require_once('views/vaccineDetail/addVaccineDetail.php');
+        }
+
     }
 ?>

@@ -3,7 +3,7 @@
                         'admin'=>['index', 'signIn'],
                         'center'=>['search', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter'],
                         'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'VaccineDelete'],
-                        'vaccineDetail'=>['index', 'updateFormVaccineDetail']); 
+                        'vaccineDetail'=>['index', 'updateFormVaccineDetail', 'addVaccineDetailPage']); 
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
