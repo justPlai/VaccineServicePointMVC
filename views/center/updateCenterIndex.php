@@ -53,7 +53,7 @@
                             <td><a href=$center->locationlink>
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
-                            <td><a href=>editVaccineDetail</a> </td>
+                            <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
                             <td><a href=>delete</a></td>";
                     ?>
                     <?php

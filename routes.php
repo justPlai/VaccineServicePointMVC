@@ -21,7 +21,9 @@
                             require_once('models/vaccines/vaccineModel.php');
                         break;
             case "vaccineDetail":   $controller = new VaccineDetailController();
+                            require_once('models/center/centerModel.php');
                             require_once('models/vaccines/vaccineModel.php');
+                            require_once('models/vaccines/vaccineDetailModel.php');
                         break;
         }
         $controller->{$action}();
