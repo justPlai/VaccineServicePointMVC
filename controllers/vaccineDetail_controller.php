@@ -35,9 +35,8 @@
             $vaccineId = $_GET['vaccineId'];
             $Dosetotal = $_GET['Dosetotal'];
             $Condition= $_GET['Condition'];
-            $Walkin = $_GET['Walkin'];
-            
-            echo $StationId.$vaccineId.$Dosetotal.$Condition.$Walkin;
+            $Walkin = $_GET['Walkin'];   
+            // echo $StationId.$vaccineId.$Dosetotal.$Condition.$Walkin;
             VaccineDetail::Add($StationId,$vaccineId,$Dosetotal,$Walkin,$Condition);
             VaccineDetailController::index();
         }
