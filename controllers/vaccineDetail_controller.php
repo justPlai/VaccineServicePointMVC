@@ -26,11 +26,19 @@
             $vaccineList = Vaccine::getAll();
             $id = $_GET['id'];
             $center = Center::get($id);
+            $vaccineDetail = VaccineDetail::get($id);
             require_once('views/vaccineDetail/addVaccineDetail.php');
         }
 
         public function addVaccineDetail(){
+            $StationId = $_GET['StationId'];
             $vaccineId = $_GET['vaccineId'];
+            $Dosetotal = $_GET['Dosetotal'];
+            $Condition= $_GET['Condition'];
+            $Walkin = $_GET['Walkin'];
+            
+            echo $StationId.$vaccineId.$Dosetotal.$Condition.$Walkin;
+            VaccineDetail::Add($StationId,$vaccineId,$Dosetotal,$Walkin,$Condition);
             VaccineDetailController::index();
         }
 

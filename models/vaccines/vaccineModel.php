@@ -22,7 +22,8 @@ class Vaccine
             $id = $my_row["id"];
             $vaccineName = $my_row["vaccineName"];
             $imgIcon = $my_row["imgIcon"];
-            $vaccineList[] = new vaccine($id, $vaccineName, $imgIcon);
+            $vaccineList[] = new Vaccine($id, $vaccineName, $imgIcon);
+            echo $id." ".$vaccineName;
         }
         require("connection_close.php");
         return $vaccineList;

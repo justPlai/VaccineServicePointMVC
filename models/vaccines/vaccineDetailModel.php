@@ -46,7 +46,7 @@
 
         public static function get($id){
             require("connection_connect.php");
-            $sql = "SELECT * FROM vaccineDetail WHERE id = '$id'";
+            $sql = "SELECT * FROM vaccineDetail JOIN vaccine WHERE vaccineId = vaccine.id AND vaccineDetail.id = '$id'";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
             $id = $my_row["id"];
@@ -63,5 +63,13 @@
             return new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description, $imgIcon);
         }
 
+        public static function Add($StationId,$vaccineId,$Dosetotal,$Walkin,$Condition)
+    {
+        require("connection_connect.php");
+        $sql = "INSERT INTO `vaccinedetail` ( `stationId`, `vaccineId`, `totalDose`, `walk_in`, `description`) VALUES ($StationId, '$vaccineId', '$Dosetotal', '$Walkin', '$Condition')";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
 
     }

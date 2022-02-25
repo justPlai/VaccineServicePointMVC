@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <main>
@@ -12,7 +13,7 @@
                 <form>
                     <input type="hidden" name="controller" value="vaccineDetail" >
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
-                    <button type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 800px;">add VaccineDetail</button>
+                    <button class="btn btn-success" type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 800px;">add VaccineDetail</button>
                 </form>
             </div>
             <div class="row">

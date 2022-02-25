@@ -1,3 +1,4 @@
+<form method="get" action="">
 <main>
     <svg viewBox="0 0 1440 185" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="d-block text-primary" width="100%" height="160">
         <path d="M 0 0 H 1440 V 60 C 1114 355 700 35 516 35 C 333 35 246 199 0 60 V 0 Z" />
@@ -6,28 +7,31 @@
         <td> </td>
         <br>
         <form style="margin-left: 0px;">
-            <h4 class="fs-3">เพิ่มวัคซีน : ศูนย์ฉีดวัคซีนกลางบางซื่อ</h4>
+            <h4 class="fs-3">เพิ่มวัคซีน : <?php echo "$center->centerName" ?></h4>
+            <input type="hidden" name="StationId" value=<?php echo "$center->id" ?>>
             <br>
             <b>เลือกวัคซีน </b>
-            <select name="Vaccibe" id="vac">
-                <option value="volvo">pfizer</option>
-                <option value="saab">astrazeneca</option>
-                <option value="opel">moderna</option>
+            <select name="vaccineId">
+                <?php foreach ($vaccineList as $vac) {
+                    echo "<option value = $vac->id>
+                    $vac->vaccineName</option>";
+                } ?>
+
             </select>
             <br>
             <br>
             <label for="lname">Dose total</label>
-            <input type="text" id="fname" name="fname" value="">
+            <input type="text"  name="Dosetotal" value="">
             <br>
             <br>
-            <label for="lname">Condition</label>
+            <label >Condition</label>
             <div class="mb-3">
-                <textarea class="form-control" id="formInput87" rows="3" style="width: 1000px; height: 238px;"></textarea>
+                <textarea class="form-control" name="Condition" rows="3" style="width: 1000px; height: 238px;" ></textarea>
             </div>
-            <label for="lname">Walk-in</label>
-            <select name="Vaccibe" id="vac">
-                <option value="volvo">Yes</option>
-                <option value="saab">No</option>
+            <label >Walk-in</label>
+            <select name="Walkin">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
             </select>
             <br>
             <br>
@@ -35,7 +39,7 @@
             <input type="hidden" name="controller" value="vaccineDetail">
             <input type="hidden" name="id" value=<?php echo "$id" ?>>
             <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancle</button>
-            <button style="margin-left: 10px;">Add vaccine</button>
+            <button type="submit" name="action" value="addVaccineDetail" style="margin-left: 10px;">Add vaccine</button>
         </form>
     </div>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
