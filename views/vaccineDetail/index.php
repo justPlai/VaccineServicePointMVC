@@ -13,9 +13,10 @@
                 <form>
                     <input type="hidden" name="controller" value="vaccineDetail" >
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
-                    <button class="btn btn-success" type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 800px;">add VaccineDetail</button>
+                    <button class="btn btn-success" type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 1100px;">add VaccineDetail</button>
                 </form>
             </div>
+            <br>
             <div class="row">
             </div>
             <table class="table">
