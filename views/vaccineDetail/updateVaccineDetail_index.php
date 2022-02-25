@@ -10,6 +10,7 @@
                     <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : ศูนย์ฉีดวัคซีนกลางบางซื่อ</h3>
                     <div class="form-check mb-3"> 
                         <input type="radio" class="btn-check" name="options" id="radioButton35" autocomplete="off"> 
+                        
                         <label class="btn btn-success" for="radioButton35" style="margin-left: 572px;">Add Vaccine detail</label>                         
                     </div>
                     <div class="row">
