@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2022 at 05:39 PM
+-- Generation Time: Feb 25, 2022 at 05:56 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -143,7 +143,19 @@ CREATE TABLE `vaccinedetail` (
 
 INSERT INTO `vaccinedetail` (`id`, `stationId`, `vaccineId`, `totalDose`, `walk_in`, `description`) VALUES
 (1, 1, 1, 500, 1, NULL),
-(2, 2, 3, 1000, 0, NULL);
+(2, 2, 3, 1000, 0, NULL),
+(3, 4, 1, 1000, 1, NULL),
+(4, 5, 2, 1000, 1, NULL),
+(5, 6, 4, 2000, 1, NULL),
+(6, 7, 4, 1500, 1, NULL),
+(7, 8, 2, 500, 1, NULL),
+(8, 9, 1, 2500, 1, NULL),
+(9, 10, 2, 1500, 1, NULL),
+(10, 11, 2, 1000, 1, NULL),
+(11, 12, 1, 1300, 1, NULL),
+(12, 13, 2, 1400, 1, NULL),
+(13, 14, 1, 3000, 1, NULL),
+(14, 3, 1, 1500, 1, NULL);
 
 --
 -- Indexes for dumped tables
@@ -202,7 +214,7 @@ ALTER TABLE `vaccine`
 -- AUTO_INCREMENT for table `vaccinedetail`
 --
 ALTER TABLE `vaccinedetail`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
