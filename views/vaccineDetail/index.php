@@ -34,7 +34,7 @@
                     foreach ($vaccineDetailList as $vaccineDetail) {
                         echo
                         "<tr>
-                            <td>Icon</td>
+                            <td><img src=$vaccineDetail->imgIcon width=80/></td>
                             <td>$vaccineDetail->vaccineName</td>
                             <td>$vaccineDetail->totalDose</td>
                             <td>$vaccineDetail->description</td>

@@ -7,8 +7,9 @@
         public $totalDose;
         public $walk_in;
         public $description;
+        public $imgIcon;
 
-        public function __construct($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description)
+        public function __construct($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description, $imgIcon)
         {
             $this->id = $id;
             $this->centerId = $centerId;
@@ -17,12 +18,13 @@
             $this->totalDose = $totalDose;
             $this->walk_in = $walk_in;
             $this->description = $description;
+            $this->imgIcon = $imgIcon;
         }
 
         public static function getAll($centerId){
             $vaccineDetailList = [];
             require("connection_connect.php");
-            $sql = "SELECT * FROM vaccinedetail WHERE stationId = '$centerId'";
+            $sql = "SELECT * ,IF(vaccinedetail.walk_in = 1, 'Yes', 'No') AS walk_in FROM vaccinedetail JOIN vaccine WHERE vaccinedetail.stationId = '$centerId' AND vaccineId = vaccine.id;";
             $result = $conn->query($sql);
             while ($my_row = $result->fetch_assoc()) {
                 $id = $my_row["id"];
@@ -33,8 +35,9 @@
                 $totalDose = $my_row["totalDose"];
                 $walk_in = $my_row["walk_in"];
                 $description = $my_row["description"];
+                $imgIcon = $my_row["imgIcon"];
 
-                $vaccineDetailList[] = new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description);
+                $vaccineDetailList[] = new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description,$imgIcon);
             }
 
             require("connection_close.php");
@@ -54,9 +57,10 @@
             $totalDose = $my_row["totalDose"];
             $walk_in = $my_row["walk_in"];
             $description = $my_row["description"];
+            $imgIcon = $my_row["imgIcon"];
             
             require("connection_close.php");
-            return new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description);
+            return new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description, $imgIcon);
         }
 
 
