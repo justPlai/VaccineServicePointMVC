@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2022 at 05:09 PM
+-- Generation Time: Feb 25, 2022 at 05:39 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -41,7 +41,25 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`id`, `username`, `password`, `firstName`, `lastName`) VALUES
 (1, 'plai', '123', 'artid', 'yenpram'),
-(2, 'plai001', '123', 'yenpram', 'artid');
+(2, 'plai001', '123', 'yenpram', 'artid'),
+(3, 'Eggmorph', 'NoctisAK47', 'thanakorn', 'phothipanyathum'),
+(4, 'Facehugger', 'Dominian01', 'Sigourney', 'Weaver'),
+(5, 'RoyalFacehugger', 'JaMeSkett69', 'Thomas', 'Skerritt'),
+(6, 'Chestburster', 'Promis596', 'Veronica', 'Cartwright'),
+(7, 'Warriormorph', '0956548657', 'Harry', 'Stanton'),
+(8, 'Queenmorph', '0856369586', 'John', 'Hurt'),
+(9, 'Runnermorph', 'John123456', 'Ronald', 'Shusett'),
+(10, 'Newbornmorph', 'JameFort47', 'Yaphet', 'Kotto'),
+(11, 'Predalien', 'Special123', 'Bolaji', 'Badejo'),
+(12, 'Deaconmorph', 'motherLess1285', 'lan', 'holm'),
+(13, 'Neomorph', 'zxc0123456789', 'Daniel', 'McBride'),
+(14, 'FlyingXenomorph', 'jameS04020540', 'Helen', 'Horton'),
+(15, 'Alphamorph', 'anime1234', 'Ian', 'McShane'),
+(16, 'Irradiated', 'kimkillall147', 'Keanu', 'Reeves'),
+(17, 'Aquatic', 'bombnuclear', 'Kim', 'Jongun'),
+(18, 'WallMaria', 'attackUK', 'Vladimir', 'Putin'),
+(19, 'Wall Rose', 'defendUK', 'Volodymyr', 'Zelensky'),
+(20, 'WallSina', 'Killallenemy', 'eren', 'yeager');
 
 -- --------------------------------------------------------
 
@@ -166,7 +184,7 @@ ALTER TABLE `vaccinedetail`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `station`
