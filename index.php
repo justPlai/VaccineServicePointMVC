@@ -54,29 +54,9 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
             </li>
           </ul>
           
-          
           <b class=" text-white" style="margin-left: 300px;">Nuttawat Juntawong</b>
           <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=index">Admin</a>
         </div>
-        <!-- <div class="collapse navbar-collapse " id="navbarNavDropdown-4">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-lg-4" href="?controller=admin&action=editCenterIndex" style="color: #ffffff;">Edit Center</a>
-              
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-lg-3 py-lg-4" href="?controller=about&action=index" style="color: #ffffff;">About</a>
-            </li>
-
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
-            </li>
-          </ul>
-          <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=signInPage">Admin</a>
-        </div> -->
       </div>
     </nav>
   </header>
