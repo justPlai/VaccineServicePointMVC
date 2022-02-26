@@ -3,7 +3,8 @@
                         'admin'=>['index', 'signIn'],
                         'center'=>['search', 'delete', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter','updateCenter'],
                         'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'delete'],
-                        'vaccineDetail'=>['index', 'delete', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail']); 
+                        'vaccineDetail'=>['index', 'delete', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail'],
+                        'about'=>['index']); 
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
@@ -25,6 +26,9 @@
                             require_once('models/vaccines/vaccineModel.php');
                             require_once('models/vaccines/vaccineDetailModel.php');
                             $controller = new VaccineDetailController();
+                        break;
+            case "about":
+                            $controller = new AboutController();
                         break;
         }
         $controller->{$action}();
