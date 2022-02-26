@@ -27,33 +27,36 @@
                     <h4>แก้ไขรายละเอียดวัคซีน : <?php echo "$center->centerName" ?></h4>
                     <br>
                     <b>เลือกวัคซีน </b>
-                    <select name="Vaccibe" id="vac">
-                        <option value="volvo">pfizer</option>
-                        <option value="saab">astrazeneca</option>
-                        <option value="opel">moderna</option>
+                    <select name="vaccineId" >
+                        <?php foreach ($vaccineList as $vac) {
+                        echo "<option value = $vac->id>
+                        $vac->vaccineName</option>";
+                     } ?>
                     </select>
                     <br>
                     <br>
-                    <label for="lname">Dose total</label>
-                    <input type="text" id="fname" name="fname" value="500">
+                    <label >Dose total</label>
+                    <input type="text" name="Dosetotal" value=<?php echo "$vaccineDetail->totalDose" ?>>
                     <br>
                     <br>
                     <label for="lname">Condition</label>
                     <div class="mb-3"> 
-                        <textarea class="form-control" id="formInput87" rows="3" style="width: 1000px; height: 238px;">เข็มที่ 1 ชนิดวัคซีนไฟเซอร์ (ฝาสีส้ม)สำหรับเด็กเล็ก อายุตั้งแต่ 5-11 ปี( มีอายุครบ 5 ปีบริบูรณ์ และไม่เกิน 12 ปี ในวันที่ฉีด )เป็นเด็กที่ศึกษานอกระบบโรงเรียนหรือนักเรียนที่ยังไม่เคยได้รับวัคซีนจากจุดฉีดใดๆมาก่อน</textarea> 
+                        <textarea class="form-control" id="formInput87" rows="3" style="width: 1000px; height: 238px;"></textarea> 
                     </div>
                     <label for="lname">Walk-in</label>
                     <select name="Vaccibe" id="vac">
-                        <option value="volvo">Yes</option>
-                        <option value="saab">No</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
                     </select>
                     <br>
                     <br>
                     <br>
                 
-                    <?php echo "<a href=?controller=vaccineDetail&action=index&id=$center->id type=button style=margin-left: 496px;>Cancel</a>" ?>
+                    <!-- <?php echo "<a href=?controller=vaccineDetail&action=index&id=$center->id type=button style=margin-left: 496px;>Cancel</a>" ?> -->
+
                     <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?> >
+                    <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancle</button>
                     <button type="submit" name="action" value="index">Edit vaccine</button>
                 </form>
             </div>

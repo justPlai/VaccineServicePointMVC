@@ -24,10 +24,10 @@
         public static function getAll($centerId){
             $vaccineDetailList = [];
             require("connection_connect.php");
-            $sql = "SELECT * ,IF(vaccinedetail.walk_in = 1, 'Yes', 'No') AS walk_in FROM vaccinedetail JOIN vaccine WHERE vaccinedetail.stationId = '$centerId' AND vaccineId = vaccine.id;";
+            $sql = "SELECT * ,vaccinedetail.id as vaccinedetailID,IF(vaccinedetail.walk_in = 1, 'Yes', 'No') AS walk_in FROM vaccinedetail JOIN vaccine WHERE vaccinedetail.stationId = '$centerId' AND vaccineId = vaccine.id;";
             $result = $conn->query($sql);
             while ($my_row = $result->fetch_assoc()) {
-                $id = $my_row["id"];
+                $id = $my_row["vaccinedetailID"];
                 $centerId = $my_row["stationId"];
                 $vaccineId = $my_row["vaccineId"];
                 $vaccine = Vaccine::get($vaccineId);
@@ -46,10 +46,10 @@
 
         public static function get($id){
             require("connection_connect.php");
-            $sql = "SELECT * FROM vaccineDetail JOIN vaccine WHERE vaccineId = vaccine.id AND vaccineDetail.id = '$id'";
+            $sql = "SELECT * ,vaccinedetail.id as vaccinedetailID FROM vaccineDetail JOIN vaccine WHERE vaccineId = vaccine.id AND vaccineDetail.id = '$id'";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
-            $id = $my_row["id"];
+            $id = $my_row["vaccinedetailID"];
             $centerId = $my_row["stationId"];
             $vaccineId = $my_row["vaccineId"];
             $vaccine = Vaccine::get($vaccineId);

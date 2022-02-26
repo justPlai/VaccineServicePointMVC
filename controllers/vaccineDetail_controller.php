@@ -8,7 +8,8 @@
         }
 
         public function updateFormVaccineDetail(){
-            $vaccineDetail_id = $_GET['id'];
+            $vaccineDetail_id = $_GET['vaccineDetailID'];
+            echo "vaccineDetail_id = ".$vaccineDetail_id;
             $vaccineDetail = VaccineDetail::get($vaccineDetail_id);
             $vaccineList = Vaccine::getAll();
             $center = Center::get($vaccineDetail->centerId);
