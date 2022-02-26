@@ -37,4 +37,3 @@
             VaccinesController::index();
         }
     }
-?>
