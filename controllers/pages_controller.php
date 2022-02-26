@@ -7,4 +7,3 @@
             require_once('views/page/error.php');
         }
     }
-?>

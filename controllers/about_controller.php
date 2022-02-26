@@ -4,4 +4,3 @@
             require_once('views/about/index.php');
         }
     }
-?>
