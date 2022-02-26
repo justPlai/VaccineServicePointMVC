@@ -14,6 +14,7 @@
             $vaccineList = Vaccine::getAll();
             $center = Center::get($vaccineDetail->centerId);
             $id = $center->id;
+            $walk_inList = array("No", "Yes");
             require_once('views/vaccineDetail/updateVaccinedetailPage.php');
         }
 

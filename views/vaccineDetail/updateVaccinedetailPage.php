@@ -29,8 +29,11 @@
                     <b>เลือกวัคซีน </b>
                     <select name="vaccineId" >
                         <?php foreach ($vaccineList as $vac) {
-                        echo "<option value = $vac->id>
-                        $vac->vaccineName</option>";
+                        echo "<option value = $vac->id";
+                        if($vaccineDetail->vaccineId == $vac->id){
+                            echo " selected='selected'";
+                        }
+                        echo ">$vac->vaccineName</option>";
                      } ?>
                     </select>
                     <br>
@@ -45,8 +48,17 @@
                     </div>
                     <label for="lname">Walk-in</label>
                     <select name="walk_in" >
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
+                        <?php
+                            if($vaccineDetail->walk_in == 1){
+                                echo "<option value=1 selected='selected'>Yes</option>";
+                                echo "<option value=0 >No</option>";
+                            }
+                            else if($vaccineDetail->walk_in == 0) {
+                                echo "<option value=1 >Yes</option>";
+                                echo "<option value=0 selected='selected'>No</option>";
+                            }
+                        ?>
+                        
                     </select>
                     <br>
                     <br>

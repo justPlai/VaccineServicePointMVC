@@ -38,7 +38,7 @@
             <br>
             <input type="hidden" name="controller" value="vaccineDetail">
             <input type="hidden" name="id" value=<?php echo "$id" ?>>
-            <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancle</button>
+            <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancel</button>
             <button type="submit" name="action" value="addVaccineDetail" style="margin-left: 10px;">Add vaccine</button>
         </form>
     </div>
