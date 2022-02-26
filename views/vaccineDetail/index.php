@@ -36,7 +36,7 @@
                     <?php
                     foreach ($vaccineDetailList as $vaccineDetail) {
                         
-                        if($vaccineDetail->walk_in == 'Yes'){
+                        if($vaccineDetail->walk_in == 1){
                             $x = "https://cdn-icons-png.flaticon.com/512/6276/6276686.png";
                             $width= 41;
                             $marginleft = 20;

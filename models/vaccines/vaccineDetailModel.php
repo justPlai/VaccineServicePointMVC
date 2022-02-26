@@ -26,10 +26,10 @@ class VaccineDetail
     {
         $vaccineDetailList = [];
         require("connection_connect.php");
-        $sql = "SELECT * ,vaccinedetail.id as vaccinedetailID,IF(vaccinedetail.walk_in = 1, 'Yes', 'No') AS walk_in FROM vaccinedetail JOIN vaccine WHERE vaccinedetail.stationId = '$centerId' AND vaccineId = vaccine.id;";
+        $sql = "SELECT *  FROM vaccinedetail WHERE stationId = '$centerId';";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
-            $id = $my_row["vaccinedetailID"];
+            $id = $my_row["id"];
             $centerId = $my_row["stationId"];
             $vaccineId = $my_row["vaccineId"];
             $vaccine = Vaccine::get($vaccineId);
@@ -37,7 +37,7 @@ class VaccineDetail
             $totalDose = $my_row["totalDose"];
             $walk_in = $my_row["walk_in"];
             $description = $my_row["description"];
-            $imgIcon = $my_row["imgIcon"];
+            $imgIcon = $vaccine->imgIcon;
 
             $vaccineDetailList[] = new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description, $imgIcon);
         }
@@ -52,7 +52,7 @@ class VaccineDetail
         $sql = "SELECT * FROM vaccineDetail WHERE id = '$id'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
-        $id = $my_row["vaccinedetailID"];
+        $id = $my_row["id"];
         $centerId = $my_row["stationId"];
         $vaccineId = $my_row["vaccineId"];
         $vaccine = Vaccine::get($vaccineId);
@@ -60,7 +60,7 @@ class VaccineDetail
         $totalDose = $my_row["totalDose"];
         $walk_in = $my_row["walk_in"];
         $description = $my_row["description"];
-        $imgIcon = $my_row["imgIcon"];
+        $imgIcon = $vaccine->imgIcon;
 
         require("connection_close.php");
         return new VaccineDetail($id, $centerId, $vaccineId, $vaccineName, $totalDose, $walk_in, $description, $imgIcon);
