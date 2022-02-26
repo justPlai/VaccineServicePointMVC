@@ -8,6 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="sign-in.css" rel="stylesheet">
 </head>
 
 <body class="text-center" style="background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/34/41/WG4Hvm.jpg');">
