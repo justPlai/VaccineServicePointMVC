@@ -34,13 +34,26 @@
                 <tbody>
                     <?php
                     foreach ($vaccineDetailList as $vaccineDetail) {
+                        
+                        if($vaccineDetail->walk_in == 'Yes'){
+                            $x = "https://cdn-icons-png.flaticon.com/512/6276/6276686.png";
+                            $width= 41;
+                            $marginleft = 20;
+                        }
+                        else{
+                            $x = "https://www.moneycorp.com/globalassets/images/email/icons/no-cross-icon.png";
+                            $width= 31; 
+                            $marginleft = 28;
+                        }
                         echo
                         "<tr>
                             <td><img src=$vaccineDetail->imgIcon width=80/></td>
                             <td>$vaccineDetail->vaccineName</td>
                             <td>$vaccineDetail->totalDose</td>
                             <td>$vaccineDetail->description</td>
-                            <td>$vaccineDetail->walk_in</td>
+                            
+                            <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
+                            
                             <td><a href=?controller=vaccineDetail&action=updateFormVaccineDetail&id=$vaccineDetail->id>Edit</a></td>
                             <td><a href=?controller=vaccineDetail&action=delete&id=$vaccineDetail->id>Delete</a> </td>";
                     ?>
@@ -48,6 +61,7 @@
                     }
                     echo "</table>";
                     ?>
+                    <!-- <td>$vaccineDetail->walk_in</td> -->
         </div>
         </tbody>
         </table>

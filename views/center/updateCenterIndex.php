@@ -50,7 +50,7 @@
                             <td>$center->date_end</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
-                            <td><a href=$center->locationlink>
+                            <td><a href='$center->locationlink' target='_blank' >
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
