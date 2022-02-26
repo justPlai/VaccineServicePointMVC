@@ -28,7 +28,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 </head>
 
 <body>
-  <?php if($controller != "admin" && $action != "index"){
+  <?php if($controller != "admin" or $action != "index"){
           require_once("navber.php");
   } ?>
   <br><?php echo "controller = " . $controller . ", action = " . $action; ?>
