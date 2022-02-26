@@ -41,10 +41,10 @@
                     <br>
                     <label for="lname">Condition</label>
                     <div class="mb-3"> 
-                        <textarea class="form-control" id="formInput87" rows="3" style="width: 1000px; height: 238px;"></textarea> 
+                        <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo $vaccineDetail->description;?></textarea> 
                     </div>
                     <label for="lname">Walk-in</label>
-                    <select name="Vaccibe" id="vac">
+                    <select name="Vaccibe" >
                         <option value="1">Yes</option>
                         <option value="0">No</option>
                     </select>

@@ -23,7 +23,7 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Vaccinedetail id</th>
+                        <!-- <th scope="col">Vaccinedetail id</th> -->
                         <th scope="col">Vaccine Name</th>
                         <th scope="col">Dose total</th>
                         <th scope="col">Condition</th>
@@ -49,7 +49,6 @@
                         echo
                         "<tr>
                             <td><img src=$vaccineDetail->imgIcon width=80/></td>
-                            <td>$vaccineDetail->id</td>
                             <td>$vaccineDetail->vaccineName</td>
                             <td>$vaccineDetail->totalDose</td>
                             <td>$vaccineDetail->description</td>
