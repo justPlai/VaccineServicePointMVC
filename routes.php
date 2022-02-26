@@ -20,7 +20,7 @@
             case "vaccine":   $controller = new VaccinesController();
                             require_once('models/vaccines/vaccineModel.php');
                         break;
-            case "vaccineDetail":   
+            case "vaccineDetail":
                             require_once('models/center/centerModel.php');
                             require_once('models/vaccines/vaccineModel.php');
                             require_once('models/vaccines/vaccineDetailModel.php');

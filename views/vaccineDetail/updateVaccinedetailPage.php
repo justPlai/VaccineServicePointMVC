@@ -44,7 +44,7 @@
                         <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo $vaccineDetail->description;?></textarea> 
                     </div>
                     <label for="lname">Walk-in</label>
-                    <select name="Vaccibe" >
+                    <select name="walk_in" >
                         <option value="1">Yes</option>
                         <option value="0">No</option>
                     </select>
@@ -57,7 +57,7 @@
                     <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?> >
                     <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancle</button>
-                    <button type="submit" name="action" value="index">Edit vaccine</button>
+                    <button type="submit" name="action" value="updateVaccineDetail">Edit vaccine</button>
                 </form>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
