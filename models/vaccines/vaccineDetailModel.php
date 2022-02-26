@@ -49,7 +49,7 @@ class VaccineDetail
     public static function get($id)
     {
         require("connection_connect.php");
-        $sql = "SELECT * ,vaccinedetail.id as vaccinedetailID FROM vaccineDetail JOIN vaccine WHERE vaccineId = vaccine.id AND vaccineDetail.id = '$id'";
+        $sql = "SELECT * FROM vaccineDetail WHERE id = '$id'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $id = $my_row["vaccinedetailID"];
