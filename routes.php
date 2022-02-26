@@ -2,7 +2,7 @@
     $controllers = array('pages'=>['home', 'error'],
                         'admin'=>['index', 'signIn'],
                         'center'=>['search', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter','updateCenter'],
-                        'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'VaccineDelete'],
+                        'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'delete'],
                         'vaccineDetail'=>['index', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail']); 
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");

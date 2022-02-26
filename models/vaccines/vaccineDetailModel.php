@@ -82,4 +82,12 @@ class VaccineDetail
         require("connection_close.php");
         return "update success $result row";
     }
+
+    public static function delete($id){
+        require("connection_connect.php");
+        $sql = "DELETE FROM vaccinedetail WHERE id = '$id'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "Delete success $result row";
+    }
 }

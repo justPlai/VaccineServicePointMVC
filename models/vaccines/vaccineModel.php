@@ -60,7 +60,7 @@ class Vaccine
 
     public static function delete($id){
         require("connection_connect.php");
-        $sql = "DELETE FROM vaccine WHERE id = '$od'";
+        $sql = "DELETE FROM vaccine WHERE id = '$id'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Delete success $result row";
