@@ -75,9 +75,9 @@ class VaccineDetail
         return;
     }
 
-    public static function update($id, $vaccineId, $totalDose, $description, $walk_in){
+    public static function update($vaccineDetailID, $vaccineId, $totalDose, $description, $walk_in){
         require("connection_connect.php");
-        $sql = "UPDATE vaccinedetail SET vaccineId = '$vaccineId', totalDose = '$totalDose', description = '$description', walk_in = '$walk_in' WHERE id = '$id'";
+        $sql = "UPDATE vaccinedetail SET vaccineId = '$vaccineId', totalDose = '$totalDose', description = '$description', walk_in = '$walk_in' WHERE id = '$vaccineDetailID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
