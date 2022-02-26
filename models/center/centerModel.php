@@ -100,4 +100,13 @@ class Center
         require("connection_close.php");
         return $centerList;
     }
+
+    public static function update($id,$CenterName,$DateStart,$DateStop,$TimeStart,$TimeStop,$Websitelink,$Imagelink,$Locationlink)
+    {
+        require("connection_connect.php");
+        $sql = "UPDATE station SET id = '$id' ,stationName = '$CenterName', date_start = '$DateStart', date_end = '$DateStop', time_start = '$TimeStart', time_end = '$TimeStop', websiteOfficial = '$Websitelink', imgIcon = '$Imagelink', locationlink = '$Locationlink' WHERE station.id = '$id'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+    }
+
 }

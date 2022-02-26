@@ -1,7 +1,7 @@
 <?php
     $controllers = array('pages'=>['home', 'error'],
                         'admin'=>['index', 'signIn'],
-                        'center'=>['search', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter'],
+                        'center'=>['search', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter','updateCenter'],
                         'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'VaccineDelete'],
                         'vaccineDetail'=>['index', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail']); 
     function call($controller, $action){

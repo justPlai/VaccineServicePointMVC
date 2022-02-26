@@ -5,45 +5,47 @@
     </svg>
     <div class="container " style="margin-left: 804px;">
         <td>
-            <img src="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/223227621_127665032863005_1327233103446507393_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqUhfrtWfHi3smk89FxKNYhX9dR24r5EGFf11HbivkQYg5Cg7X8EZFZwzTpP3sqZCu6O_IN6DSRKy_-Deo31bX&_nc_ohc=u5pMGQUOkBsAX-qXF5Z&_nc_ht=scontent.fkdt2-1.fna&oh=00_AT9pCFm-fON3KeQFHBw9Y9IKyDGwdHhKsmbCmKxzUZ44aw&oe=620AC075" width="156" style="margin-left: 60px;">
+            <img src="<?php echo "$center->imgIcon"?>" width="156" style="margin-left: 60px;">
         </td>
+        <br>
         <br>
         <form>
             <label for="">Center name</label>
-            <input type="text" id="lname" name="CenterName" value="ศูนย์ฉีดวัคซีนกลางบางซื่อ">
+            <input type="text"  name="CenterName" value=<?php echo "$center->centerName"?>>
             <br>
             <br>
             <label for="lname">Date Start</label>
-            <input type="date" id="lname" name="DateStart" value="2023-03-01">
+            <input type="date"  name="DateStart" value=<?php echo "$center->date_start"?>>
             <br>
             <br>
             <label for="lname">Date Stop</label>
-            <input type="date" id="lname" name="DateStop" value="2023-03-03">
+            <input type="date"  name="DateStop" value=<?php echo "$center->date_end"?>>
             <br>
             <br>
             <label for="lname">Time Start</label>
-            <input type="time" id="lname" name="TimeStart" value="09:00">
+            <input type="time"  name="TimeStart" value=<?php echo "$center->time_start"?>>
             <br>
             <br>
             <label for="lname">Time Stop</label>
-            <input type="time" id="lname" name="TimeStop" value="16:00">
+            <input type="time"  name="TimeStop" value=<?php echo "$center->time_end"?>>
             <br>
             <br>
             <label for="lname">Website link</label>
-            <input type="text" id="fname" name="Websitelink" value="https://www.facebook.com/CentralVaccinationCenter/">
+            <input type="text"  name="Websitelink" value=<?php echo "$center->websiteOfficial"?>>
             <br>
             <br>
             <label for="lname">Image link</label>
-            <input type="text" id="fname" name="Imagelink" value="https://scontent.fkdt2-1.fna.fbcdn.net/v/t39.30808-6/223227621_127665032863005_1327233103446507393_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFqUhfrtWfHi3smk89FxKNYhX9dR24r5EGFf11HbivkQYg5Cg7X8EZFZwzTpP3sqZCu6O_IN6DSRKy_-Deo31bX&_nc_ohc=u5pMGQUOkBsAX-qXF5Z&_nc_ht=scontent.fkdt2-1.fna&oh=00_AT9pCFm-fON3KeQFHBw9Y9IKyDGwdHhKsmbCmKxzUZ44aw&oe=620AC075">
+            <input type="text"  name="Imagelink" value=<?php echo "$center->imgIcon"?>>
             <br>
             <br>
             <label for="lname">Location google link</label>
-            <input type="text" id="fname" name="Locationlink" value="https://www.google.com/maps/dir//%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%89%E0%B8%B5%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%84%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD+%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/@13.7989317,100.5410694,14.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x30e29d09ab4449f5:0x7338b4dc56152849!2m2!1d100.5426592!2d13.8032369">
+            <input type="text"  name="Locationlink" value=<?php echo "$center->locationlink"?>>
             <br>
             <br>
         <input type="hidden" name="controller" value="center" />
+        <input type="hidden" name="id" value="<?php echo $center->id; ?>"/>
         <button type="submit" style="margin-left: 62px;" name="action" value="updateCenterIndex">Cancel</button>
-        <button class="" style="margin-left: 24px;">Update center</button>
+        <button type="submit" style="margin-left: 24px;" name="action" value="updateCenter">Update center</button>
         </form>
     </div>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

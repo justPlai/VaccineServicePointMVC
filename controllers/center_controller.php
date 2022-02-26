@@ -29,6 +29,22 @@
             require_once('views/center/updateCenterPage.php');
         }
 
+        public function updateCenter(){
+            $id = $_GET['id'];
+            $CenterName = $_GET['CenterName'];
+            $DateStart = $_GET['DateStart'];
+            $DateStop = $_GET['DateStop'];
+            $TimeStart = $_GET['TimeStart'];
+            $TimeStop = $_GET['TimeStop'];
+            $Websitelink = $_GET['Websitelink'];
+            $Imagelink = $_GET['Imagelink'];
+            $Locationlink = $_GET['Locationlink'];
+            //echo $id." ".$CenterName." ".$DateStart." ".$DateStop." ".$TimeStart." ".$TimeStop." ".$Websitelink." ".$Imagelink." ".$Locationlink;
+            Center::update($id,$CenterName,$DateStart,$DateStop,$TimeStart,$TimeStop,$Websitelink,$Imagelink,$Locationlink);
+            CentersController::updateCenterIndex();
+        }
+
+
         public function addCenterPage(){
             require_once('views/center/addCenterPage.php');
         }
