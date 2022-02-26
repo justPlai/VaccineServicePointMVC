@@ -56,7 +56,7 @@
                             <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
                             
                             <td><a href=?controller=vaccineDetail&action=updateFormVaccineDetail&vaccineDetailID=$vaccineDetail->id>Edit</a></td>
-                            <td><a href=?controller=vaccineDetail&action=delete&id=$vaccineDetail->id>Delete</a> </td>";
+                            <td><a href=?controller=vaccineDetail&action=delete&id=$vaccineDetail->centerId&vaccineDetail_id=$vaccineDetail->id onclick=myFunction()>Delete</a> </td>";
                     ?>
                     <?php
                     }
@@ -80,6 +80,11 @@
 </main>
 <script src="assets/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    function myFunction() {
+        alert("test");
+    }
+</script>
 </body>
 
 </html>

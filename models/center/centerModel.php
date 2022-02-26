@@ -109,4 +109,12 @@ class Center
         require("connection_close.php");
     }
 
+    public static function delete($id){
+        require("connection_connect.php");
+        $sql = "DELETE FROM station WHERE id = '$id'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "Delete success $result row";
+    }
+
 }

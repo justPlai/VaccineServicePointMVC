@@ -70,5 +70,11 @@
 
         }
 
+        public function delete(){
+            $id = $_GET['id'];
+            Center::delete($id);
+            CentersController::updateCenterIndex();
+        }
+
     }
 ?>

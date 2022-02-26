@@ -47,5 +47,12 @@
             VaccineDetailController::index();
         }
 
+        public function delete(){
+            $id = $_GET['id'];
+            $vaccineDetail_id = $_GET['vaccineDetail_id'];
+            VaccineDetail::delete($vaccineDetail_id);
+            VaccineDetailController::index();
+        }
+
     }
 ?>

@@ -30,9 +30,11 @@
 
         }
 
-        public function VaccineDelete(){
+        public function delete(){
             //alert comfirm delete
-            require_once('views/vaccine/index.php');
+            $id = $_GET['id'];
+            Vaccine::delete($id);
+            VaccinesController::index();
         }
     }
 ?>

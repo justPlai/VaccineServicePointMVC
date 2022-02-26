@@ -54,7 +54,7 @@
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
-                            <td><a href=>delete</a></td>";
+                            <td><a href=?controller=center&action=delete&id=$center->id onclick=myFunction()>delete</a></td>";
                     ?>
                     <?php
                     }
@@ -91,6 +91,11 @@
 </main>
 <script src="assets/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    function myFunction() {
+        alert("test");
+    }
+</script>
 </body>
 <section class="bg-dark pb-5 pt-5 text-white-50">
     <div class="container">
