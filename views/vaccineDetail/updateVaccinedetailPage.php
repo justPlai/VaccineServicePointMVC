@@ -51,13 +51,11 @@
                     <br>
                     <br>
                     <br>
-                
-                    <!-- <?php echo "<a href=?controller=vaccineDetail&action=index&id=$center->id type=button style=margin-left: 496px;>Cancel</a>" ?> -->
 
                     <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?> >
                     <input type="hidden" name="vaccineDetailID" value=<?php echo "$vaccineDetail_id" ?> >
-                    <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancle</button>
+                    <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancel</button>
                     <button type="submit" name="action" value="updateVaccineDetail">Edit vaccine</button>
                 </form>
             </div>

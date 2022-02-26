@@ -18,8 +18,7 @@
         }
 
         public function updateVaccineDetail(){
-            //$id = $_GET['id'];
-            $center = Center::get($id);
+            $id = $_GET['id'];
             $vaccineId = $_GET['vaccineId'];
             $totalDose = $_GET['Dosetotal'];
             $description = $_GET['Condition'];
