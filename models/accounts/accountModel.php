@@ -37,12 +37,16 @@ class Account
                     return $account;
                 } else {
                     require("connection_close.php");
-                    return new Account(0, "null", "null", "null", "null");
+                    $account = new Account(0, "null", "null", "null", "null");
+                    $account->token = 0;
+                    return $account;
                 }
             }
         } else {
             require("connection_close.php");
-            return new Account(0, "null", "null", "null", "null");
+            $account = new Account(0, "null", "null", "null", "null");
+            $account->token = 0;
+            return $account;
         }
     }
 
@@ -62,6 +66,4 @@ class Account
         $account->token = true;
         return $account;
     }
-
-    
 }

@@ -11,7 +11,6 @@
             $account = Account::signIn($baseUsername, $basePassword);
             echo "<- token=$account->token ->";
             $token = $account->token;
-
             require_once('views/page/home.php');
         }
 

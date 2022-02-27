@@ -35,6 +35,6 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
   } ?>
   <br><?php echo "controller = " . $controller . ", action = " . $action; ?>
   <?php require_once("routes.php") ?>
-</body>
+
 
 </html>
