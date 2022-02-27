@@ -8,7 +8,12 @@
         <div class="container pb-5 pt-5">
             <div>
                 <img src="https://cdn-icons-png.flaticon.com/512/1/1755.png" width="29" class="float-start" />
-                <h3 class="float-start" style="padding-left: 9px;">รายละเอียดวัคซีน : <?php echo "$center->centerName" ?></h3>
+                <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : <?php echo "$center->centerName" ?></h3>
+                <form>
+                    <input type="hidden" name="controller" value="vaccineDetail">
+                    <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
+                    <button class="btn btn-success" type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 1100px;">add VaccineDetail</button>
+                </form>
             </div>
             <br>
             <div class="row">
@@ -22,6 +27,8 @@
                         <th scope="col">Dose total</th>
                         <th scope="col">Condition</th>
                         <th scope="col">Walk-in</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,7 +51,13 @@
                             <td>$vaccineDetail->totalDose</td>
                             <td style='text-align: left; max-width: 600px;'>$vaccineDetail->description</td>
                             
-                            <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>";
+                            <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
+                            
+                            <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=updateFormVaccineDetail&vaccineDetailID=$vaccineDetail->id>Edit</a></td>
+                            <td>
+                            <a type=button class='btn btn-danger' onclick=myFunction($vaccineDetail->id)>Delete</a> </td>
+                            
+                            </td>";
                     ?>
                     <?php
                     }

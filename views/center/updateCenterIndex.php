@@ -59,7 +59,7 @@
                             <td><a href='$center->locationlink' target='_blank' >
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a class='btn btn-warning' href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
-                            <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
+                            <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=updateIndex&id=$center->id>editVaccineDetail</a> </td>
                             <td><a type=button class='btn btn-danger' onclick=myFunction($center->id)>Delete</a> </td>";
                     ?>
                     <?php

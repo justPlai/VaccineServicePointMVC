@@ -7,9 +7,15 @@
             require_once('views/vaccineDetail/index.php');
         }
 
+        public function updateIndex(){
+            $centerId = $_GET['id'];
+            $center = Center::get($centerId);
+            $vaccineDetailList = VaccineDetail::getAll($centerId);
+            require_once('views/vaccineDetail/updateIndex.php');
+        }
+
         public function updateFormVaccineDetail(){
             $vaccineDetail_id = $_GET['vaccineDetailID'];
-            echo "vaccineDetail_id = ".$vaccineDetail_id;
             $vaccineDetail = VaccineDetail::get($vaccineDetail_id);
             $vaccineList = Vaccine::getAll();
             $center = Center::get($vaccineDetail->centerId);
@@ -43,14 +49,14 @@
             $Condition= $_GET['Condition'];
             $Walkin = $_GET['Walkin'];
             VaccineDetail::Add($StationId,$vaccineId,$Dosetotal,$Walkin,$Condition);
-            VaccineDetailController::index();
+            VaccineDetailController::updateIndex();
         }
 
         public function delete(){
             $id = $_GET['id'];
             $vaccineDetail_id = $_GET['vaccineDetail_id'];
             VaccineDetail::delete($vaccineDetail_id);
-            VaccineDetailController::index();
+            VaccineDetailController::updateIndex();
         }
 
     }
