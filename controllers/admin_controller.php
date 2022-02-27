@@ -11,6 +11,10 @@
             $account = Account::signIn($baseUsername, $basePassword);
             echo "<- token=$account->token ->";
             $token = $account->token;
+            $_SESSION['username'] = $account->user;
+            $_SESSION['token'] = "1";
+            echo $_SESSION['username'];
+            echo $_SESSION['token'];
             require_once('views/page/home.php');
         }
 

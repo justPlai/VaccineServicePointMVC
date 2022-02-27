@@ -6,7 +6,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
   $controller = 'pages';
   $action = 'home';
 }
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
