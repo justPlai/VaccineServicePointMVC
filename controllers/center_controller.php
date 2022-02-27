@@ -72,7 +72,7 @@ class CentersController
         //echo $CenterName." ".$DateStart." ".$DateStop." ".$TimeStart." ".$TimeStop." ".$Websitelink." ".$Imagelink." ".$Locationlink." ".$filler;
 
         Center::Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler);
-        CentersController::index();
+        CentersController::updateCenterIndex();
     }
 
     public function delete()
