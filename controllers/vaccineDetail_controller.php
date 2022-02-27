@@ -32,7 +32,7 @@
             $walk_in = $_GET['walk_in'];
             $vaccineDetailID = $_GET['vaccineDetailID'];
             VaccineDetail::update($vaccineDetailID, $vaccineId, $totalDose, $description, $walk_in);
-            VaccineDetailController::index();
+            VaccineDetailController::updateIndex();
         }
 
         public function addVaccineDetailPage(){
