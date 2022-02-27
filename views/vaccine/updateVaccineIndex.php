@@ -34,7 +34,7 @@
                             <td><img src=$vaccine->imgIcon width=80/></td>
                             <td>$vaccine->vaccineName</td>
                             <td><a href=?controller=vaccine&action=updateFormVaccine&id=$vaccine->id>แก้ไข</a></td>
-                            <td><a type=button onclick=myFunction()>Delete</a> </td>";
+                            <td><a type=button onclick=myFunction($vaccine->id)>Delete</a> </td>";
                     ?>
                     <?php
                     }
@@ -60,7 +60,7 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
 <script>
-    function myFunction() {
+    function myFunction(id) {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -71,7 +71,7 @@
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href="?controller=vaccine&action=delete&id="+<?php echo $vaccine->id ?>
+                window.location.href="?controller=vaccine&action=delete&id="+id
             }
         })
     }
