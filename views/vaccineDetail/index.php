@@ -51,7 +51,7 @@
                             <td><img src=$vaccineDetail->imgIcon width=80/></td>
                             <td>$vaccineDetail->vaccineName</td>
                             <td>$vaccineDetail->totalDose</td>
-                            <td>$vaccineDetail->description</td>
+                            <td style='text-align: left; max-width: 600px;'>$vaccineDetail->description</td>
                             
                             <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
                             
