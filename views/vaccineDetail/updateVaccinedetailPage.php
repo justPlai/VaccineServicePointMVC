@@ -44,7 +44,7 @@
                     <br>
                     <label for="lname">Condition</label>
                     <div class="mb-3"> 
-                        <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo $vaccineDetail->description;?></textarea> 
+                        <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo "<p>"+$vaccineDetail->description+"</p>";?></textarea> 
                     </div>
                     <label for="lname">Walk-in</label>
                     <select name="walk_in" >
