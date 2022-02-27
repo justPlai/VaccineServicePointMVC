@@ -45,9 +45,9 @@
                     <input type="hidden"  name="filler" value="1"> 
                 
                 <input type="hidden" name="controller" value="center" />
-                <button type="submit" name="action" value="updateCenterIndex">Cancel</button>
+                <button class="btn btn-danger" type="submit" name="action" value="updateCenterIndex">Cancel</button>
                 <input type="hidden" name="controller" value="center" />
-                <button style="margin-left: 14px;" type="submit" name="action" value="addCenter">Add center</button>
+                <button class="btn btn-primary" style="margin-left: 14px;" type="submit" name="action" value="addCenter">Add center</button>
                 </form>
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

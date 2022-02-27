@@ -44,8 +44,8 @@
             <br>
         <input type="hidden" name="controller" value="center" />
         <input type="hidden" name="id" value="<?php echo $center->id; ?>"/>
-        <button type="submit" style="margin-left: 62px;" name="action" value="updateCenterIndex">Cancel</button>
-        <button type="submit" style="margin-left: 24px;" name="action" value="updateCenter">Update center</button>
+        <button class="btn btn-danger" type="submit" style="margin-left: 62px;" name="action" value="updateCenterIndex">Cancel</button>
+        <button class="btn btn-primary" type="submit" style="margin-left: 24px;" name="action" value="updateCenter">Update center</button>
         </form>
     </div>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">

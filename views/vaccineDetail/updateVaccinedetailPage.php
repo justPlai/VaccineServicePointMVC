@@ -44,7 +44,7 @@
                     <br>
                     <label for="lname">Condition</label>
                     <div class="mb-3"> 
-                        <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo "<p>"+$vaccineDetail->description+"</p>";?></textarea> 
+                        <textarea name="Condition" type="text" rows="3" style="width: 1000px; height: 238px;" ><?php echo $vaccineDetail->description;?></textarea> 
                     </div>
                     <label for="lname">Walk-in</label>
                     <select name="walk_in" >
@@ -67,9 +67,9 @@
                     <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?> >
                     <input type="hidden" name="vaccineDetailID" value=<?php echo "$vaccineDetail_id" ?> >
-                    <button type="submit" name="action" value="index" style="margin-left: 496px;">Cancel</button>
-                    <button type="submit" name="action" value="updateVaccineDetail">Edit vaccine</button>
-                </form>
+                    <button class="btn btn-danger" type="submit" name="action" value="index" style="margin-left: 496px;">Cancel</button>
+                    <button class="btn btn-primary" type="submit" name="action" value="updateVaccineDetail">Edit vaccine</button>
+                </form>S
             </div>
             <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
                 <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z"/>

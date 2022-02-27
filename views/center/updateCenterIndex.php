@@ -18,8 +18,10 @@
                     <!-- <input type="hidden" name="controller" value="center"> -->
                     <input type="text"  name="key" >
                     <input type="hidden" name="controller" value="center">
-                    <button type="submit" name="action" value="searchupdateCenter" style="margin-right: 950px">search</button>
+                    
+                    <button class="btn btn-light float-none rounded-pill" type="submit" name="action" value="searchupdateCenter" style="margin-right: 950px"><img src="https://images-ext-2.discordapp.net/external/NHvA5oY7TNCKjB7f-4qxgHDDdxAVKs17yj9FTGLNi9k/%3Ftoken%3Dexp%3D1645978488~hmac%3Dfb1b6a573094af0a14933715a0acb73f/https/cdn-icons.flaticon.com/png/512/3031/premium/3031293.png" width="20px"></button>
                 </form>
+                
             </div>
             <div class="row">
             </div>
@@ -56,9 +58,9 @@
                             <td>$center->time_end</td>
                             <td><a href='$center->locationlink' target='_blank' >
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
-                            <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
-                            <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
-                            <td><a type=button onclick=myFunction($center->id)>Delete</a> </td>";
+                            <td><a class='btn btn-warning' href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
+                            <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
+                            <td><a type=button class='btn btn-danger' onclick=myFunction($center->id)>Delete</a> </td>";
                     ?>
                     <?php
                     }

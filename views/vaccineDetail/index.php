@@ -53,9 +53,9 @@
                             
                             <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
                             
-                            <td><a href=?controller=vaccineDetail&action=updateFormVaccineDetail&vaccineDetailID=$vaccineDetail->id>Edit</a></td>
+                            <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=updateFormVaccineDetail&vaccineDetailID=$vaccineDetail->id>Edit</a></td>
                             <td>
-                            <a type=button onclick=myFunction($vaccineDetail->id)>Delete</a> </td>
+                            <a type=button class='btn btn-danger' onclick=myFunction($vaccineDetail->id)>Delete</a> </td>
                             
                             </td>";
                     ?>

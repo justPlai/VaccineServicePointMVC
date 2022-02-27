@@ -33,8 +33,8 @@
                         "<tr>
                             <td><img src=$vaccine->imgIcon width=80/></td>
                             <td>$vaccine->vaccineName</td>
-                            <td><a href=?controller=vaccine&action=updateFormVaccine&id=$vaccine->id>แก้ไข</a></td>
-                            <td><a type=button onclick=myFunction($vaccine->id)>Delete</a> </td>";
+                            <td><a class='btn btn-warning' href=?controller=vaccine&action=updateFormVaccine&id=$vaccine->id>Edit</a></td>
+                            <td><a type=button class='btn btn-danger' onclick=myFunction($vaccine->id)>Delete</a> </td>";
                     ?>
                     <?php
                     }
