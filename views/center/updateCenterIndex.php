@@ -58,7 +58,7 @@
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
-                            <td><a type=button onclick=myFunction()>Delete</a> </td>";
+                            <td><a type=button onclick=myFunction($center->id)>Delete</a> </td>";
                     ?>
                     <?php
                     }
@@ -95,7 +95,7 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
-    function myFunction() {
+    function myFunction(id) {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -106,7 +106,7 @@
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href="?controller=center&action=delete&id="+<?php echo $center->id ?>
+                window.location.href="?controller=center&action=delete&id="+id
             }
         })
     }
