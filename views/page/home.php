@@ -22,16 +22,6 @@
             <input type="hidden" name="action" value="search">
             <button class="btn btn-light float-none rounded-pill" type="submit" style="margin-top: -15px; color: #000000; text-align: center; font-size: 24px; font-weight: normal;">Search</button>
           </form>
-
-          <h2><?php 
-                if(isset($_SESSION['username'])){
-                  echo $_SESSION['username'];
-                if($_SESSION['username'] == "plai"){
-                  echo "yes";
-                }
-                }
-          ?></h2>
-
         </div>
         <div class="col-lg-6 pb-3 pt-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="1231.529" height="920.751" viewBox="0 0 1231.529 920.751" class="img-fluid">

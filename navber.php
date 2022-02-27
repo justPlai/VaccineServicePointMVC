@@ -34,13 +34,17 @@
           </li>
         </ul>
         <?php
+        if(isset($_SESSION['username'])){
           echo "<b class='text-white' style='margin-left: 350px;'>";
           echo $_SESSION['username'];
           echo "</b>";
-        
-
+          ?>
+          <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=signOut">Sign Out</a>
+          <?php
+        }else{
+          echo "<a class='btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill' href='?controller=admin&action=index'>Admin</a>";
+        }
         ?>
-        <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=index">Admin</a>
       </div>
     </div>
   </nav>

@@ -1,20 +1,18 @@
 <?php
     $controllers = array('pages'=>['home', 'error'],
-                        'admin'=>['index', 'signIn'],
+                        'admin'=>['index', 'signIn', 'signOut'],
                         'center'=>['search', 'delete', 'index', 'updateCenterIndex', 'updateFormCenter', 'addCenterPage', 'addCenter', 'searchupdateCenter','updateCenter'],
                         'vaccine'=>['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'delete'],
                         'vaccineDetail'=>['index', 'delete', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail'],
-                        'about'=>['index']); 
+                        'about'=>['index']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
             case "pages":   $controller = new PagesController();
                         break;
-
             case "center":  require_once("models/center/centerModel.php");
                             $controller = new CentersController();
                         break;
-
             case "admin":   $controller = new AdminsController();
                             require_once('models/vaccines/vaccineModel.php');
                             require_once('models/accounts/accountModel.php');
@@ -22,14 +20,12 @@
             case "vaccine":   $controller = new VaccinesController();
                             require_once('models/vaccines/vaccineModel.php');
                         break;
-            case "vaccineDetail":
+            case "vaccineDetail": $controller = new VaccineDetailController();
                             require_once('models/center/centerModel.php');
                             require_once('models/vaccines/vaccineModel.php');
                             require_once('models/vaccines/vaccineDetailModel.php');
-                            $controller = new VaccineDetailController();
                         break;
-            case "about":
-                            $controller = new AboutController();
+            case "about":   $controller = new AboutController();
                         break;
         }
         $controller->{$action}();

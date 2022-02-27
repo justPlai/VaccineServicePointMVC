@@ -8,6 +8,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 }
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
