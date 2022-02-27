@@ -3,9 +3,9 @@
         <path d="M 0 0 H 1440 V 60 C 1114 355 700 35 516 35 C 333 35 246 199 0 60 V 0 Z" />
     </svg>
     <section class="border-bottom pb-5 pt-5 text-center">
-    <img src="https://freeiconshop.com/wp-content/uploads/edd/search-flat.png" width="29" class="float-start" style="margin-left: 135px"/>
+        <img src="https://freeiconshop.com/wp-content/uploads/edd/search-flat.png" width="29" class="float-start" style="margin-left: 135px" />
         <div>
-        <h3 class="float-start" style="padding-left: 9px;">Search : </h3>
+            <h3 class="float-start" style="padding-left: 9px;">Search : </h3>
             <form method="get" action="">
                 <input type="text" name="key" value=<?php echo "$key" ?>>
                 <input type="hidden" name="controller" value="center">
@@ -13,8 +13,8 @@
             </form>
         </div>
         <div class="container pb-5 pt-5">
-            
-            
+
+
             <div class="row">
             </div>
             <table class="table">
@@ -33,11 +33,15 @@
                 </thead>
                 <tbody>
 
-                <?php
+                    <?php
                     foreach ($centerList as $center) {
-                        echo
-                        "<tr>
-                            <td><img src=$center->imgIcon width=80/></td>
+                        echo "<tr>";
+                        if ($center->imgIcon == null) {
+                            echo "<td><img src=https://media.discordapp.net/attachments/818770134902374460/947398434699231232/PinClipart.com_hospital-clipart_293561.png?width=60&height=60 /></td>";
+                        } else {
+                            echo "<td><img src=$center->imgIcon width=60 height=60/></td>";
+                        }
+                        echo "
                             <td>$center->centerName</td>
                             <td>$center->date_start</td>
                             <td>$center->date_end</td>
@@ -51,16 +55,16 @@
                             <td><a href=$center->websiteOfficial>
                             <img src=https://cdn-icons-png.flaticon.com/512/4298/4298077.png width=20/></a></td>";
                     ?>
-                     <?php
+                    <?php
                     }
                     echo "</table>";
                     ?>
-                    
-                    </div>
-                </tbody>
-            </table>
+
         </div>
-        <nav aria-label="...">
+        </tbody>
+        </table>
+        </div>
+        <!-- <nav aria-label="...">
             <ul class=" pagination" style="margin-left: 819px;">
                 <li class="page-item disabled">
                     <span class="page-link">Previous</span>
@@ -78,7 +82,7 @@
                     <a class="page-link" href="#">Next</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </section>
     <section class="pb-5 pt-5">
     </section>
@@ -99,4 +103,5 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>

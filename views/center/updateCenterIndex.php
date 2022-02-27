@@ -42,9 +42,13 @@
                 <tbody>
                     <?php
                     foreach ($centerList as $center) {
-                        echo
-                        "<tr>
-                            <td><img src=$center->imgIcon width=80/></td>
+                        echo "<tr>";
+                        if ($center->imgIcon == null) {
+                            echo "<td><img src=https://media.discordapp.net/attachments/818770134902374460/947398434699231232/PinClipart.com_hospital-clipart_293561.png?width=60&height=60 /></td>";
+                        } else {
+                            echo "<td><img src=$center->imgIcon width=60 height=60/></td>";
+                        }
+                        echo "
                             <td>$center->centerName</td>
                             <td>$center->date_start</td>
                             <td>$center->date_end</td>
@@ -65,7 +69,7 @@
         </tbody>
         </thead>
         
-        <nav aria-label="...">
+        <!-- <nav aria-label="...">
             <ul class=" pagination" style="margin-left: 819px;">
                 <li class="page-item disabled">
                     <span class="page-link">Previous</span>
@@ -83,7 +87,7 @@
                     <a class="page-link" href="#">Next</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </section>
     <svg viewBox="0 0 1440 134" preserveAspectRatio="none" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="bg-dark d-block text-white" width="100%" height="80">
         <path d="M 0 0 H 1440 V 60 C 854 276 596 -66 0 60 V 0 Z" />
