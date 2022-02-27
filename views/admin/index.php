@@ -18,13 +18,12 @@
 
     <br><br><br><br><br>
     <form class="form-signin">
-        <a class="font-weight-bold fw-bold text-uppercase" style="font-size: 30px;">Vaccine center</a>
+        <a class="font-weight-bold fw-bold text-uppercase" style="font-size: 30px;" href="?controller=pages&action=home">Vaccine center</a>
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <input type="hidden" name="controller" value="admin">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="action" value="signIn">Sign in</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2022-2023</p>
     </form>
     <!-- Bootstrap core JavaScript

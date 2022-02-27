@@ -5,15 +5,17 @@
         }
 
         public function signIn(){
-            $baseUsername = $_GET['baseUsername'];
-            $basePassword = $_GET['basePassword'];
+            $baseUsername = $_GET['username'];
+            $basePassword = $_GET['password'];
+            
             $account = Account::signIn($baseUsername, $basePassword);
-            if($account != null){
-                if($account->token == true){
-                    CentersController::index();
-                }
-            }
-            AdminsController::index();
+            echo "<- token=$account->token ->";
+            // if($account->token == 1){
+            //     require_once('views/page/home.php');
+            // }else if($account->token == 0){
+            //     require_once('views/page/home.php');
+            // }
+            require_once('views/page/home.php');
         }
 
     }
