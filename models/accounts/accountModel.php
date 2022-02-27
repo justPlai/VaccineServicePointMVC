@@ -6,7 +6,7 @@ class Account
     public $pwd;
     public $firstname;
     public $lastname;
-    public $token;
+    public $token = false;
 
     public function __construct($id, $user, $pwd, $firstname, $lastname)
     {
@@ -15,7 +15,6 @@ class Account
         $this->pwd = $pwd;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
-        $this->token = false;
     }
 
     public static function signIn($baseUsername, $basePassword)
@@ -43,8 +42,26 @@ class Account
             }
         } else {
             require("connection_close.php");
-
             return new Account(0, "null", "null", "null", "null");
         }
     }
+
+    public static function get($id)
+    {
+        require("connection_connect.php");
+        $sql = "SELECT * FROM account WHERE id = '$id'";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+        $id = $my_row["id"];
+        $user = $my_row["username"];
+        $pwd = $my_row["password"];
+        $firstname = $my_row["firstName"];
+        $lastname = $my_row["lastName"];
+        require("connection_close.php");
+        $account = new Account($id, $user, $pwd, $firstname, $lastname);
+        $account->token = true;
+        return $account;
+    }
+
+    
 }

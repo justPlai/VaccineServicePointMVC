@@ -6,6 +6,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
   $controller = 'pages';
   $action = 'home';
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +29,9 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 </head>
 
 <body>
-  <?php if($controller != "admin" or $action != "index"){
-          require_once("navber.php");
+
+  <?php if ($controller != "admin" or $action != "index") {
+    require_once("navber.php");
   } ?>
   <br><?php echo "controller = " . $controller . ", action = " . $action; ?>
   <?php require_once("routes.php") ?>
