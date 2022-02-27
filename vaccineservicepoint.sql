@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2022 at 04:27 PM
+-- Generation Time: Feb 27, 2022 at 04:34 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- PHP Version: 8.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,7 +76,7 @@ CREATE TABLE `station` (
   `time_end` time NOT NULL,
   `websiteOfficial` varchar(100) CHARACTER SET tis620 DEFAULT NULL,
   `imgIcon` varchar(500) DEFAULT NULL,
-  `filler` int(5) NOT NULL,
+  `filler` int(11) NOT NULL,
   `locationlink` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -232,7 +232,7 @@ ALTER TABLE `station`
 -- Constraints for table `vaccinedetail`
 --
 ALTER TABLE `vaccinedetail`
-  ADD CONSTRAINT `vaccinedetail_ibfk_1` FOREIGN KEY (`stationId`) REFERENCES `station` (`id`),
+  ADD CONSTRAINT `vaccinedetail_ibfk_1` FOREIGN KEY (`stationId`) REFERENCES `station` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `vaccinedetail_ibfk_2` FOREIGN KEY (`vaccineId`) REFERENCES `vaccine` (`id`);
 COMMIT;
 
