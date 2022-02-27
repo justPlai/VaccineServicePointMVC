@@ -27,6 +27,9 @@ session_start();
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- <script src="sweetalert2.all.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>

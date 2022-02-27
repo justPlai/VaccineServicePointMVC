@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <main>
@@ -11,7 +10,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/1/1755.png" width="29" class="float-start" />
                 <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : <?php echo "$center->centerName" ?></h3>
                 <form>
-                    <input type="hidden" name="controller" value="vaccineDetail" >
+                    <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
                     <button class="btn btn-success" type="submit" name="action" value="addVaccineDetailPage" style="margin-left: 1100px;">add VaccineDetail</button>
                 </form>
@@ -35,15 +34,14 @@
                 <tbody>
                     <?php
                     foreach ($vaccineDetailList as $vaccineDetail) {
-                        
-                        if($vaccineDetail->walk_in == 1){
+
+                        if ($vaccineDetail->walk_in == 1) {
                             $x = "https://cdn-icons-png.flaticon.com/512/6276/6276686.png";
-                            $width= 41;
+                            $width = 41;
                             $marginleft = 20;
-                        }
-                        else{
+                        } else {
                             $x = "https://www.moneycorp.com/globalassets/images/email/icons/no-cross-icon.png";
-                            $width= 31; 
+                            $width = 31;
                             $marginleft = 28;
                         }
                         echo
@@ -56,7 +54,10 @@
                             <td><img src='$x' width='$width' style='margin-left: $marginleft px;'></td>
                             
                             <td><a href=?controller=vaccineDetail&action=updateFormVaccineDetail&vaccineDetailID=$vaccineDetail->id>Edit</a></td>
-                            <td><a href=?controller=vaccineDetail&action=delete&id=$vaccineDetail->centerId&vaccineDetail_id=$vaccineDetail->id onclick=myFunction()>Delete</a> </td>";
+                            <td>
+                            <a type=button onclick=myFunction()>Delete</a> </td>
+                            
+                            </td>";
                     ?>
                     <?php
                     }
@@ -82,7 +83,19 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
     function myFunction() {
-        alert("test");
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href="?controller=vaccineDetail&action=delete&id="+<?php echo $vaccineDetail->centerId ?>+"&vaccineDetail_id="+<?php echo $vaccineDetail->id ?>
+            }
+        })
     }
 </script>
 </body>

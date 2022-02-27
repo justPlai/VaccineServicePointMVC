@@ -58,7 +58,7 @@
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a href=?controller=vaccineDetail&action=index&id=$center->id>editVaccineDetail</a> </td>
-                            <td><a href=?controller=center&action=delete&id=$center->id onclick=myFunction()>delete</a></td>";
+                            <td><a type=button onclick=myFunction()>Delete</a> </td>";
                     ?>
                     <?php
                     }
@@ -68,7 +68,6 @@
 
         </tbody>
         </thead>
-        
         <!-- <nav aria-label="...">
             <ul class=" pagination" style="margin-left: 819px;">
                 <li class="page-item disabled">
@@ -97,7 +96,19 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script>
     function myFunction() {
-        alert("test");
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href="?controller=center&action=delete&id="+<?php echo $center->id ?>
+            }
+        })
     }
 </script>
 </body>
