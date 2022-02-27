@@ -10,8 +10,10 @@
             
             $account = Account::signIn($baseUsername, $basePassword);
             $token = $account->token;
-            $_SESSION['username'] = $account->user;
-            $_SESSION['token'] = "1";
+            if($token == 1){
+                $_SESSION['firstname'] = $account->firstname;
+                $_SESSION['token'] = "1";
+            }
             header("Location: index.php");
             
         }

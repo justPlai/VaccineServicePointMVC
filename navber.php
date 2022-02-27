@@ -34,9 +34,9 @@
           </li>
         </ul>
         <?php
-        if(isset($_SESSION['username'])){
-          echo "<b class='text-white' style='margin-left: 350px;'>";
-          echo $_SESSION['username'];
+        if(isset($_SESSION['firstname'])){
+          echo "<b class='text-white' style='margin-left: 48%;'>";
+          echo $_SESSION['firstname'];
           echo "</b>";
           ?>
           <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=admin&action=signOut">Sign Out</a>
