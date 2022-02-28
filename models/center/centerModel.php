@@ -71,7 +71,7 @@ class Center
 
     public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $locationlink, $filler)
     {
-        echo "in Add filler = $filler";
+        // echo "in Add filler = $filler";
         require("connection_connect.php");
         $sql = "INSERT INTO `station` ( `stationName`, `date_start`, `date_end`, `time_start`, `time_end`, `websiteOfficial`, `imgIcon`, `filler`, `locationlink`) VALUES ( '$CenterName', '$DateStart', '$DateStop', '$TimeStart', '$TimeStop', '$Websitelink', '$Imagelink', '$filler', '$locationlink');";
         $result = $conn->query($sql);
