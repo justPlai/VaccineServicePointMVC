@@ -11,7 +11,7 @@ class Center
     public $imgIcon;
     public $locationlink;
     public $filler;
-    
+
     public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler)
     {
         $this->id = $id;
@@ -48,7 +48,8 @@ class Center
         return $centerList;
     }
 
-    public static function get($id){
+    public static function get($id)
+    {
         require("connection_connect.php");
         $sql = "SELECT * FROM station WHERE id = '$id'";
         $result = $conn->query($sql);
@@ -101,7 +102,7 @@ class Center
         return $centerList;
     }
 
-    public static function update($id,$CenterName,$DateStart,$DateStop,$TimeStart,$TimeStop,$Websitelink,$Imagelink,$Locationlink)
+    public static function update($id, $CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink)
     {
         require("connection_connect.php");
         $sql = "UPDATE station SET id = '$id' ,stationName = '$CenterName', date_start = '$DateStart', date_end = '$DateStop', time_start = '$TimeStart', time_end = '$TimeStop', websiteOfficial = '$Websitelink', imgIcon = '$Imagelink', locationlink = '$Locationlink' WHERE station.id = '$id'";
@@ -109,12 +110,12 @@ class Center
         require("connection_close.php");
     }
 
-    public static function delete($id){
+    public static function delete($id)
+    {
         require("connection_connect.php");
         $sql = "DELETE FROM station WHERE id = '$id'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Delete success $result row";
     }
-
 }

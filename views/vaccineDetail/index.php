@@ -80,7 +80,7 @@
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href="?controller=vaccineDetail&action=delete&id="+<?php echo $vaccineDetail->centerId ?>+"&vaccineDetail_id="+id
+                window.location.href = "?controller=vaccineDetail&action=delete&id=" + <?php echo $vaccineDetail->centerId ?> + "&vaccineDetail_id=" + id
             }
         })
     }

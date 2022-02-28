@@ -29,7 +29,8 @@ class Vaccine
         return $vaccineList;
     }
 
-    public static function get($id){
+    public static function get($id)
+    {
         require("connection_connect.php");
         $sql = "SELECT * FROM vaccine WHERE id = '$id'";
         $result = $conn->query($sql);
@@ -42,7 +43,8 @@ class Vaccine
         return new vaccine($id, $vaccineName, $imgIcon);
     }
 
-    public static function update($id, $vaccineName, $imgIcon){
+    public static function update($id, $vaccineName, $imgIcon)
+    {
         require("connection_connect.php");
         $sql = "UPDATE vaccine SET vaccineName = '$vaccineName', imgIcon = '$imgIcon' WHERE id = '$id'";
         $result = $conn->query($sql);
@@ -50,7 +52,8 @@ class Vaccine
         return "update success $result row";
     }
 
-    public static function add($vaccineName, $imgIcon){
+    public static function add($vaccineName, $imgIcon)
+    {
         require("connection_connect.php");
         $sql = "INSERT INTO `vaccine` (`vaccineName`, `imgIcon`) VALUES ('$vaccineName', '$imgIcon');";
         $result = $conn->query($sql);
@@ -58,7 +61,8 @@ class Vaccine
         return "Add success $result row";
     }
 
-    public static function delete($id){
+    public static function delete($id)
+    {
         require("connection_connect.php");
         $sql = "DELETE FROM vaccine WHERE id = '$id'";
         $result = $conn->query($sql);

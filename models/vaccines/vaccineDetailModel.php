@@ -75,7 +75,8 @@ class VaccineDetail
         return;
     }
 
-    public static function update($id, $vaccineId, $totalDose, $description, $walk_in){
+    public static function update($id, $vaccineId, $totalDose, $description, $walk_in)
+    {
         require("connection_connect.php");
         $sql = "UPDATE vaccinedetail SET vaccineId = '$vaccineId', totalDose = '$totalDose', description = '$description', walk_in = '$walk_in' WHERE id = '$id'";
         $result = $conn->query($sql);
@@ -83,7 +84,8 @@ class VaccineDetail
         return "update success $result row";
     }
 
-    public static function delete($id){
+    public static function delete($id)
+    {
         require("connection_connect.php");
         $sql = "DELETE FROM vaccinedetail WHERE id = '$id'";
         $result = $conn->query($sql);

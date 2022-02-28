@@ -15,10 +15,10 @@
             <input type="text" id="imgIcon" name="imgIcon" value="">
             <br>
             <br>
-        
-        <input type="hidden" name="controller" value="vaccine">
-        <button class="btn btn-danger" type="submit" name="action" value="index" style="margin-left: 14px;">Cancel</button>
-        <button class="btn btn-primary" type="submit" name="action" value="addVaccine" style="margin-left: 14px;">Add Vaccine</button>
+
+            <input type="hidden" name="controller" value="vaccine">
+            <button class="btn btn-danger" type="submit" name="action" value="index" style="margin-left: 14px;">Cancel</button>
+            <button class="btn btn-primary" type="submit" name="action" value="addVaccine" style="margin-left: 14px;">Add Vaccine</button>
         </form>
         <br>
         <br>
