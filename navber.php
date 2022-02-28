@@ -1,6 +1,6 @@
 <!-- navbar -->
 <header>
-  <nav class="bg-primary border-bottom navbar navbar-dark navbar-expand-lg py-lg-1">
+  <nav class="bg-primary border-bottom navbar navbar-dark navbar-expand-lg py-lg-1" style="top: 0;width: 100%;position: fixed;">
     <div class="container">
       <a class="fw-bold navbar-brand text-uppercase" href="?controller=pages&action=home" style="font-size: 30px;">Vaccine center</a>
       <a class="nav-link px-lg-3 py-lg-4" href="?controller=center&action=index" style="color: #ffffff;">All centers</a>
@@ -48,4 +48,5 @@
       </div>
     </div>
   </nav>
+  <br><br><br>
 </header>
