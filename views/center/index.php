@@ -9,7 +9,7 @@
             <form method="get" action="">
                 <input type="text" name="key" value=<?php echo "$key" ?>>
                 <input type="hidden" name="controller" value="center">
-                <button class="btn btn-light float-none rounded-pill" type="submit" name="action" value="search" style="margin-right: 999px"><img src="https://cdn-icons.flaticon.com/png/512/3031/premium/3031293.png?token=exp=1645978488~hmac=fb1b6a573094af0a14933715a0acb73f" width="20px"></button>
+                <button class="btn btn-light float-none rounded-pill" type="submit" name="action" value="search" style="margin-right: 999px"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="20px"></button>
             </form>
         </div>
         <div class="container pb-5 pt-5">
