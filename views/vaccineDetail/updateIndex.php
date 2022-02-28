@@ -8,7 +8,7 @@
         <div class="container pb-5 pt-5">
             <div>
                 <img src="https://cdn-icons-png.flaticon.com/512/1/1755.png" width="29" class="float-start" />
-                <h3 class="float-start" style="padding-left: 9px;">แก้ไขวัคซีน : <?php echo "$center->centerName" ?></h3>
+                <h3 class="float-start" style="padding-left: 9px;">แก้ไขรายละเอียดวัคซีน : <?php echo "$center->centerName" ?></h3>
                 <form>
                     <input type="hidden" name="controller" value="vaccineDetail">
                     <input type="hidden" name="id" value=<?php echo "$center->id" ?>>
@@ -21,7 +21,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col"> </th>
                         <!-- <th scope="col">Vaccinedetail id</th> -->
                         <th scope="col">Vaccine Name</th>
                         <th scope="col">Dose total</th>

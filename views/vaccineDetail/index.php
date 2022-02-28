@@ -16,7 +16,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col"> </th>
                         <!-- <th scope="col">Vaccinedetail id</th> -->
                         <th scope="col">Vaccine Name</th>
                         <th scope="col">Dose total</th>

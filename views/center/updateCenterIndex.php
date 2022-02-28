@@ -30,7 +30,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Icon</th>
+                        <th scope="col"> </th>
                         <th scope="col">Center Name</th>
                         <th scope="col">Date Start</th>
                         <th scope="col">Date Stop</th>
