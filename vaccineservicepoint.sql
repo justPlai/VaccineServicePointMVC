@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2022 at 04:34 PM
+-- Generation Time: Mar 01, 2022 at 01:40 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -103,6 +103,20 @@ INSERT INTO `station` (`id`, `stationName`, `date_start`, `date_end`, `time_star
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `stationdetail`
+--
+
+CREATE TABLE `stationdetail` (
+  `id` int(11) NOT NULL,
+  `stationId` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
+  `totalDosed` int(11) DEFAULT NULL,
+  `filler` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `vaccine`
 --
 
@@ -157,7 +171,8 @@ INSERT INTO `vaccinedetail` (`id`, `stationId`, `vaccineId`, `totalDose`, `walk_
 (13, 14, 1, 1000, 0, 'เข็ม 3 และ 4<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนแอสตร้าเซนเนก้าเป็นเข็มที่ 3<br>\r\n•	SV+SV ครบ 1 เดือนขึ้นไป<br>\r\n•	SP+SP ครบ 1 เดือนขึ้นไป<br>\r\n•	SV+AZ ครบ 3 เดือนขึ้นไป<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนไฟเซอร์เป็นเข็มที่ 3<br>\r\n•	AZ+AZ ครบ 3 เดือนขึ้นไป<br>\r\n•	SV+PZ ครบ 3 เดือนขึ้นไป<br>\r\n•	AZ+PZ ครบ 6 เดือนขึ้นไป<br>\r\n•	PZ+PZ ครบ 6 เดือนขึ้นไป<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนเข็มที่ 4<br>\r\n•	ฉีดเข็มที่ 4 ห่างจากเข็มที่ 3 เป็นเวลา 3 เดือน<br>\r\n•	สูตร 1 SV1+SV2+AZ3 = AZ4<br>\r\n•	สูตร 2 SV1+SV2+PZ3 = PZ4'),
 (14, 3, 3, 270, 1, '-ลงทะเบียนเข้ารับการฉีดวัคซีนเข็ม 3 ด้วยวัคซีนโมเดอร์นาและไฟเซอร์สำหรับผู้ป่วยที่มีโรคประจำตัว 3 กลุ่มโรค \r\nที่ได้รับวัคซีนแอสตร้าเซนเนก้า ครบ 2 เข็ม เกิน 3 เดือน <br>\r\n-สำหรับ 3 กลุ่มโรคดังกล่าว ได้แก่ โรคมะเร็ง โรคหัวใจ โรคเบาหวาน รับจำนวนจำกัด 90 คน ต่อโรค รวม 270 คน โดยจะฉีดวัคซีนเข้าผ่านทางกล้ามเนื้อด้วยวัคซีน \r\n\r\n'),
 (15, 14, 2, 500, 1, 'เข็มที่ 1-4 จำนวน 500 คน<br>\r\nเงื่อนไข<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนเข็มที่ 3 เป็น AstraZeneca<br>\r\n•	SV+SV ครบ 1 เดือนขึ้นไป<br>\r\n•	SP+SP ครบ 1 เดือนขึ้นไป<br>\r\n•	SV+AZ ครบ 3 เดือนขึ้นไป<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนเข็มที่ 3 เป็น Pfizer<br>\r\n•	AZ+AZ ครบ 3 เดือนขึ้นไป<br>\r\n•	SV+PZ ครบ 3 เดือนขึ้นไป<br>\r\n•	AZ+PZ ครบ 6 เดือนขึ้นไป<br>\r\n•	PZ+PZ ครบ 6 เดือนขึ้นไป<br>\r\nสำหรับผู้ที่จะได้รับวัคซีนเข็มที่ 4<br>\r\n•	ฉีดเข็มที่ 4 ห่างจากเข็ม 3 เป็นเวลา 3 เดือน<br>\r\n•	สูตร 1 SV1+SV2+AZ3=AZ4 จะได้รับ As'),
-(16, 2, 2, 1000, 1, 'วัคซีนสูตรแอสตร้าเซนเนก้า-แอสตร้าเซนเนก้า (เข็ม 1 และ เข็ม 2) เว้นช่วง 3 เดือน ก่อนฉีดเข็ม 3 ด้วย ไฟเซอร์');
+(16, 2, 2, 1000, 1, 'วัคซีนสูตรแอสตร้าเซนเนก้า-แอสตร้าเซนเนก้า (เข็ม 1 และ เข็ม 2) เว้นช่วง 3 เดือน ก่อนฉีดเข็ม 3 ด้วย ไฟเซอร์'),
+(17, 1, 1, 444, 1, '');
 
 --
 -- Indexes for dumped tables
@@ -175,6 +190,14 @@ ALTER TABLE `account`
 ALTER TABLE `station`
   ADD PRIMARY KEY (`id`),
   ADD KEY `filler` (`filler`);
+
+--
+-- Indexes for table `stationdetail`
+--
+ALTER TABLE `stationdetail`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `filler` (`filler`),
+  ADD KEY `stationdetail_ibfk_1` (`stationId`);
 
 --
 -- Indexes for table `vaccine`
@@ -207,6 +230,12 @@ ALTER TABLE `station`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT for table `stationdetail`
+--
+ALTER TABLE `stationdetail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `vaccine`
 --
 ALTER TABLE `vaccine`
@@ -216,7 +245,7 @@ ALTER TABLE `vaccine`
 -- AUTO_INCREMENT for table `vaccinedetail`
 --
 ALTER TABLE `vaccinedetail`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
@@ -227,6 +256,13 @@ ALTER TABLE `vaccinedetail`
 --
 ALTER TABLE `station`
   ADD CONSTRAINT `station_ibfk_1` FOREIGN KEY (`filler`) REFERENCES `account` (`id`);
+
+--
+-- Constraints for table `stationdetail`
+--
+ALTER TABLE `stationdetail`
+  ADD CONSTRAINT `stationdetail_ibfk_1` FOREIGN KEY (`stationId`) REFERENCES `station` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `stationdetail_ibfk_2` FOREIGN KEY (`filler`) REFERENCES `account` (`id`);
 
 --
 -- Constraints for table `vaccinedetail`
