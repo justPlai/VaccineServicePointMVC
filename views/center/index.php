@@ -41,10 +41,15 @@
                         } else {
                             echo "<td><img src=$center->imgIcon width=60 height=60/></td>";
                         }
+                        $timestampstart = strtotime($center->date_start);
+                        $new_datestart = date("d-m-Y", $timestampstart);
+                        $timestampend = strtotime($center->date_end);
+                        $new_dateend = date("d-m-Y", $timestampend);
+                        
                         echo "
                             <td>$center->centerName</td>
-                            <td>$center->date_start</td>
-                            <td>$center->date_end</td>
+                            <td>$new_datestart</td>
+                            <td>$new_dateend</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
                             
