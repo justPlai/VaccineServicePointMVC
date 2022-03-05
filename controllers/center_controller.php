@@ -88,10 +88,7 @@ class CentersController
 
         CenterDetail::Add($stationdetailID, $DateStartupdate, '0', $filler);
         for ($y = 0; $y < $numberDays; $y++) {
-            $x = 1;
-            $setdat = '+' . $x . ' days';
-            $dateupdate =  date('Y-m-d', strtotime($DateStartupdate . $setdat));
-
+            $dateupdate =  date('Y-m-d', strtotime($DateStartupdate . '+ 1 days'));
             CenterDetail::Add($stationdetailID, $dateupdate, '0', $filler);
             $DateStartupdate =  $dateupdate;
         };
