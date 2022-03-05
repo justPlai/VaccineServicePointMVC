@@ -69,6 +69,18 @@ class Center
         return new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
     }
 
+    public static function getlastID()
+    {
+        require("connection_connect.php");
+        $sql = "SELECT MAX(id) AS id FROM station";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+        $id = $my_row['id'];
+        $centerID = $id;
+        require("connection_close.php");
+        return $centerID;
+    }
+
     public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $locationlink, $filler)
     {
         // echo "in Add filler = $filler";

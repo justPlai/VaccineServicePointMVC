@@ -2,13 +2,13 @@
 class CenterDetailController
 {
 
-    public function index()
-    {
-        $centerId = $_GET['id'];
-        $center = Center::get($centerId);
-        $vaccineDetailList = CenterDetail::getAll($centerId);
-        require_once('views/centerDetail/index.php');
-    }
+    // public function index()
+    // {
+    //     $centerId = $_GET['id'];
+    //     $center = Center::get($centerId);
+    //     $centerDetailList = CenterDetail::getAll($centerId);
+    //     require_once('views/centerDetail/index.php');
+    // }
 
     // public function updateCenterIndex()
     // {

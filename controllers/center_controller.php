@@ -59,6 +59,9 @@ class CentersController
     public function addCenter()
     {
         //echo " in addCenter";
+        $stationdetailID = Center::getlastID();
+
+
         $CenterName = $_GET['CenterName'];
         $DateStart = $_GET['DateStart'];
         $DateStop = $_GET['DateStop'];
@@ -69,10 +72,31 @@ class CentersController
         $Locationlink = $_GET['Locationlink'];
         $filler = $_GET['filler'];
 
-        //echo $CenterName." ".$DateStart." ".$DateStop." ".$TimeStart." ".$TimeStop." ".$Websitelink." ".$Imagelink." ".$Locationlink." ".$filler;
-
         Center::Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler);
         CentersController::updateCenterIndex();
+
+        $IntstationdetailID = (int)$stationdetailID;
+        $IntstationdetailID = $IntstationdetailID + 1;
+        $stationdetailID = (string)$IntstationdetailID;
+
+        $startTimeStamp = strtotime($DateStart);
+        $endTimeStamp = strtotime($DateStop);
+        $timeDiff = abs($endTimeStamp - $startTimeStamp);
+        $numberDays = $timeDiff / 86400;  // 86400 seconds in one day
+        $numberDays = intval($numberDays);
+        $DateStartupdate = $DateStart;
+
+        CenterDetail::Add($stationdetailID, $DateStartupdate, '0', $filler);
+        for ($y = 0; $y < $numberDays; $y++) {
+            $x = 1;
+            $setdat = '+' . $x . ' days';
+            $dateupdate =  date('Y-m-d', strtotime($DateStartupdate . $setdat));
+
+            CenterDetail::Add($stationdetailID, $dateupdate, '0', $filler);
+            $DateStartupdate =  $dateupdate;
+        };
+
+        
     }
 
     public function delete()

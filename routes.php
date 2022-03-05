@@ -6,7 +6,7 @@ $controllers = array(
     'vaccine' => ['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'delete'],
     'vaccineDetail' => ['index', 'updateIndex', 'delete', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail'],
     'about' => ['index'],
-    'centerDetail' => ['index','addCenterDetail','updateFormCenterDetail','updateCenterDetail']
+    'centerDetail' => ['index','addcenterDetail','updateFormCenterDetail','updateCenterDetail']
 );
 function call($controller, $action)
 {
@@ -16,8 +16,9 @@ function call($controller, $action)
             $controller = new PagesController();
             break;
         case "center":
-            require_once("models/center/centerModel.php");
             $controller = new CentersController();
+            require_once("models/center/centerModel.php");
+            require_once("models/centerDetail/centerDetailModel.php");
             break;
         case "admin":
             $controller = new AdminsController();
