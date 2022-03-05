@@ -1,5 +1,5 @@
 <?php
-class CenterDetail
+class centerDetail
 {
     public $StationId;
     public $date;

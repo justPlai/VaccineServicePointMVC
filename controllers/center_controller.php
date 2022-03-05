@@ -61,7 +61,6 @@ class CentersController
         //echo " in addCenter";
         $stationdetailID = Center::getlastID();
 
-
         $CenterName = $_GET['CenterName'];
         $DateStart = $_GET['DateStart'];
         $DateStop = $_GET['DateStop'];
