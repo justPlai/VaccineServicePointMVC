@@ -72,7 +72,7 @@ class CentersController
         $filler = $_GET['filler'];
 
         Center::Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler);
-        CentersController::updateCenterIndex();
+        
 
         $IntstationdetailID = (int)$stationdetailID;
         $IntstationdetailID = $IntstationdetailID + 1;
@@ -92,7 +92,7 @@ class CentersController
             $DateStartupdate =  $dateupdate;
         };
 
-        
+        CentersController::updateCenterIndex();
     }
 
     public function delete()
