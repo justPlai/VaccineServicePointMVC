@@ -43,6 +43,7 @@
                 <br>
                 <br>
                 <input type="hidden" name="filler" value="1">
+                <!-- เหลือที่ filler มันยังเป้นแบบfix ค่าอยู่ ต้องแก้ให้เป็นเปลี่ยนไปตาม บช.-->
 
                 <input type="hidden" name="controller" value="center" />
                 <button class="btn btn-danger" type="submit" name="action" value="updateCenterIndex">Cancel</button>
