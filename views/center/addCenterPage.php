@@ -42,7 +42,7 @@
                 <input type="text" name="Locationlink">
                 <br>
                 <br>
-                <input type="hidden" name="filler" value="1">
+                <input type="hidden" name="filler" value=<?php echo $_SESSION['accountId'] ?>>
                 <!-- เหลือที่ filler มันยังเป้นแบบfix ค่าอยู่ ต้องแก้ให้เป็นเปลี่ยนไปตาม บช.-->
 
                 <input type="hidden" name="controller" value="center" />
