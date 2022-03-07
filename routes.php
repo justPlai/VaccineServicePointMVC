@@ -34,6 +34,7 @@ function call($controller, $action)
             require_once('models/center/centerModel.php');
             require_once('models/vaccines/vaccineModel.php');
             require_once('models/vaccines/vaccineDetailModel.php');
+            require_once('models/centerDetail/centerDetailModel.php');
             break;
         case "about":
             $controller = new AboutController();

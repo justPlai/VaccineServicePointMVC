@@ -65,8 +65,8 @@
                             <td>$center->sumTotalDose</td>
                             <td><a href='$center->locationlink' target='_blank' >
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
-                            <td><a href='?controller=centerDetail&action=index&id=$center->id'  >
-                            <img src=https://cdn-icons.flaticon.com/png/512/4418/premium/4418034.png?token=exp=1646583517~hmac=28f33321a4a6b6b0ca00bc5fa4489b34 width=25/></a></td>
+                            <td><a href='?controller=centerDetail&action=index&id=$center->id'>
+                            <img src=https://sv1.picz.in.th/images/2022/03/07/rsb8lq.png width=25/></a></td>
                             <td><a class='btn btn-warning' href=?controller=center&action=updateFormCenter&id=$center->id>editCenter</a></td>
                             <td><a class='btn btn-warning' href=?controller=vaccineDetail&action=updateIndex&id=$center->id>editVaccineDetail</a> </td>
                             <td><a type=button class='btn btn-danger' onclick=myFunction($center->id)>Delete</a> </td>";
