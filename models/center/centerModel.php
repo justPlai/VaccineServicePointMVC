@@ -7,12 +7,13 @@ class Center
     public $date_end;
     public $time_start;
     public $time_end;
+    public $sumTotalDose;
     public $websiteOfficial;
     public $imgIcon;
     public $locationlink;
     public $filler;
 
-    public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler)
+    public function __construct($id, $centerName, $date_start, $date_end, $time_start, $time_end, $sumTotalDose, $websiteOfficial, $imgIcon, $locationlink, $filler)
     {
         $this->id = $id;
         $this->centerName = $centerName;
@@ -20,6 +21,7 @@ class Center
         $this->date_end = $date_end;
         $this->time_start = $time_start;
         $this->time_end = $time_end;
+        $this->sumTotalDose = $sumTotalDose;
         $this->websiteOfficial = $websiteOfficial;
         $this->imgIcon = $imgIcon;
         $this->locationlink = $locationlink;
@@ -38,11 +40,12 @@ class Center
             $date_end = $my_row['date_end'];
             $time_start = $my_row['time_start'];
             $time_end = $my_row['time_end'];
+            $sumTotalDose = centerDetail::sumTotalDose($id);
             $websiteOfficial = $my_row['websiteOfficial'];
             $imgIcon = $my_row['imgIcon'];
             $locationlink = $my_row['locationlink'];
             $filler = $my_row['filler'];
-            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
+            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $sumTotalDose, $websiteOfficial, $imgIcon, $locationlink, $filler);
         }
         require("connection_close.php");
         return $centerList;
@@ -60,13 +63,14 @@ class Center
         $date_end = $my_row['date_end'];
         $time_start = $my_row['time_start'];
         $time_end = $my_row['time_end'];
+        $sumTotalDose = centerDetail::sumTotalDose($id);
         $websiteOfficial = $my_row['websiteOfficial'];
         $imgIcon = $my_row['imgIcon'];
         $locationlink = $my_row['locationlink'];
         $filler = $my_row['filler'];
 
         require("connection_close.php");
-        return new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
+        return new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $sumTotalDose, $websiteOfficial, $imgIcon, $locationlink, $filler);
     }
 
     public static function getlastID()
@@ -81,7 +85,7 @@ class Center
         return $centerID;
     }
 
-    public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $locationlink, $filler)
+    public static function Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $sumTotalDose, $Websitelink, $Imagelink, $locationlink, $filler)
     {
         // echo "in Add filler = $filler";
         require("connection_connect.php");
@@ -104,11 +108,12 @@ class Center
             $date_end = $my_row['date_end'];
             $time_start = $my_row['time_start'];
             $time_end = $my_row['time_end'];
+            $sumTotalDose = centerDetail::sumTotalDose($id);
             $websiteOfficial = $my_row['websiteOfficial'];
             $imgIcon = $my_row['imgIcon'];
             $locationlink = $my_row['locationlink'];
             $filler = $my_row['filler'];
-            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $websiteOfficial, $imgIcon, $locationlink, $filler);
+            $centerList[] = new Center($id, $centerName, $date_start, $date_end, $time_start, $time_end, $sumTotalDose, $websiteOfficial, $imgIcon, $locationlink, $filler);
         }
         require("connection_close.php");
         return $centerList;

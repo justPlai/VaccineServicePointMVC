@@ -76,5 +76,16 @@ class centerDetail
         return "update success $result row";
     }
 
+    public static function sumTotalDose($stationId){
+        
+        require("connection_connect.php");
+        $sql = "SELECT SUM(totalDosed) as sum FROM `stationdetail` WHERE stationId = '$stationId'";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+        $sum = $my_row["sum"];
+        require("connection_close.php");
+        return $sum;
+    }
+
 
 }

@@ -22,7 +22,7 @@ class CentersController
         require_once('views/center/index.php');
     }
 
-    public function updateCenterIndex()
+    public static function updateCenterIndex()
     {
         $centerList = Center::getAll();
         require_once('views/center/updateCenterIndex.php');
@@ -66,12 +66,13 @@ class CentersController
         $DateStop = $_GET['DateStop'];
         $TimeStart = $_GET['TimeStart'];
         $TimeStop = $_GET['TimeStop'];
+        $sumTotalDose = 0;
         $Websitelink = $_GET['Websitelink'];
         $Imagelink = $_GET['Imagelink'];
         $Locationlink = $_GET['Locationlink'];
         $filler = $_GET['filler'];
 
-        Center::Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $Websitelink, $Imagelink, $Locationlink, $filler);
+        Center::Add($CenterName, $DateStart, $DateStop, $TimeStart, $TimeStop, $sumTotalDose, $Websitelink, $Imagelink, $Locationlink, $filler);
         
 
         $IntstationdetailID = (int)$stationdetailID;

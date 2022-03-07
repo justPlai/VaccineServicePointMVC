@@ -36,6 +36,7 @@
                             <th scope="col">Date Stop</th>
                             <th scope="col">Time Start</th>
                             <th scope="col">Time Stop</th>
+                            <th scope="col">Vaccinated</th>
                             <th scope="col">location</th>
                             <th scope="col">Edit Dose daily</th>
                             <th scope="col">Edit</th>
@@ -61,6 +62,7 @@
                             <td>$new_dateend</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
+                            <td>$center->sumTotalDose</td>
                             <td><a href='$center->locationlink' target='_blank' >
                             <img src=https://cdn.jim-nielsen.com/ios/512/google-maps-2014-11-12.png width=20/></a></td>
                             <td><a href='?controller=centerDetail&action=index&id=$center->id'  >

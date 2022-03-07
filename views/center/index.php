@@ -26,6 +26,7 @@
                         <th scope="col">Date Stop</th>
                         <th scope="col">Time Start</th>
                         <th scope="col">Time Stop</th>
+                        <th scope="col">Vaccinated</th>
                         <th scope="col">Vaccine detail</th>
                         <th scope="col">Google map</th>
                         <th scope="col">Website</th>
@@ -52,6 +53,7 @@
                             <td>$new_dateend</td>
                             <td>$center->time_start</td>
                             <td>$center->time_end</td>
+                            <td>$center->sumTotalDose</td>
                             
                             <td><a href=?controller=vaccineDetail&action=index&id=$center->id>
                             <img src=https://cdn-icons-png.flaticon.com/512/1/1755.png width=20/></a></td>

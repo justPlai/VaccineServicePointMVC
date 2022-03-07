@@ -59,4 +59,27 @@ class CenterDetailController
     //     CentersController::updateCenterIndex();
     // }
 
+    public function generateDate(){
+        $stationId = $_GET['stationId'];
+        $station = Center::get($stationId);
+        $DateStart = $station->date_start;
+        $DateStop = $station->date_end;
+
+        $startTimeStamp = strtotime($DateStart);
+        $endTimeStamp = strtotime($DateStop);
+        $timeDiff = abs($endTimeStamp - $startTimeStamp);
+        $numberDays = $timeDiff / 86400;  // 86400 seconds in one day
+        $numberDays = intval($numberDays);
+        $DateStartupdate = $DateStart;
+
+        CenterDetail::Add($stationId, $DateStartupdate, '0', $_SESSION['accountId']);
+        for ($y = 0; $y < $numberDays; $y++) {
+            $dateupdate =  date('Y-m-d', strtotime($DateStartupdate . '+ 1 days'));
+            CenterDetail::Add($stationId, $dateupdate, '0', $_SESSION['accountId']);
+            $DateStartupdate =  $dateupdate;
+        };
+
+        CentersController::updateCenterIndex();
+    }
+
 }

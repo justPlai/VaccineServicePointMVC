@@ -9,7 +9,11 @@
             <div class="container pb-5 pt-5">
                 <img src="https://cdn-icons-png.flaticon.com/512/6688/6688341.png" width="35" class="float-start" />
                 <h3 class="float-start" style="padding-left: 9px;">Edit Dose daily : <?php echo "$center->centerName" ?></h3>
-               
+                <!-- <form>
+                    <input type="hidden" name="stationId" value=<?php //echo $centerId ?>>
+                    <input type="hidden" name="controller" value="centerDetail">
+                    <input type="submit" name="action" value="generateDate">
+                </form> -->
                 
                 <div class="row">
                 </div>

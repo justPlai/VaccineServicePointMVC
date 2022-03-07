@@ -6,7 +6,7 @@ $controllers = array(
     'vaccine' => ['index', 'updateFormVaccine', 'updateVaccine', 'addVaccinePage', 'addVaccine', 'delete'],
     'vaccineDetail' => ['index', 'updateIndex', 'delete', 'updateVaccineDetail', 'updateFormVaccineDetail', 'addVaccineDetailPage', 'addVaccineDetail'],
     'about' => ['index'],
-    'centerDetail' => ['index','addcenterDetail','updateFormCenterDetail','updateCenterDetail']
+    'centerDetail' => ['index','addcenterDetail','updateFormCenterDetail','updateCenterDetail', 'generateDate']
 );
 function call($controller, $action)
 {
@@ -41,6 +41,7 @@ function call($controller, $action)
         case "centerDetail":
             require_once('models/center/centerModel.php');
             require_once('models/centerDetail/centerDetailModel.php');
+            require_once('controllers/center_controller.php');
             $controller = new CenterDetailController();
             break;  
     }
