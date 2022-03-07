@@ -16,6 +16,7 @@ class AdminsController
         if ($token == 1) {
             $_SESSION['firstname'] = $account->firstname;
             $_SESSION['token'] = "1";
+            $_SESSION['accountId'] = $account->id;
         }
         header("Location: index.php");
     }
@@ -24,6 +25,5 @@ class AdminsController
     {
         session_destroy();
         header("Location: index.php");
-        // require_once('views/page/home.php');
     }
 }
