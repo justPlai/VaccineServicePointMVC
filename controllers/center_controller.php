@@ -93,7 +93,8 @@ class CentersController
             $DateStartupdate =  $dateupdate;
         };
 
-        CentersController::updateCenterIndex();
+        //CentersController::updateCenterIndex();
+        header('location: http://localhost/vaccineservicepointMVC/?controller=center&action=updateCenterIndex');
     }
 
     public function delete()

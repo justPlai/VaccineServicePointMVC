@@ -32,7 +32,7 @@ class VaccinesController
         $vaccineName = $_GET['vaccineName'];
         $imgIcon = $_GET['imgIcon'];
         Vaccine::add($vaccineName, $imgIcon);
-        VaccinesController::index();
+        //VaccinesController::index();
         header('location: http://localhost/vaccineservicepointMVC/?controller=vaccine&action=index');
     }
 
